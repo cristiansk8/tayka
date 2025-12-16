@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { getProducts } from 'lib/shopify';
 import Link from 'next/link';
 import Image from 'next/image';
+import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
   title: 'Home',
@@ -282,29 +283,34 @@ function HelpSection() {
 // Página Principal
 export default function HomePage() {
   return (
-    <main>
-      {/* Hero */}
-      <TaykaHero />
+    <>
+      <main>
+        {/* Hero */}
+        <TaykaHero />
 
-      {/* Categorías */}
-      <CategoryCards />
+        {/* Products - Segundo componente */}
+        <Suspense
+          fallback={
+            <div className="py-16 text-center">
+              <div className="text-[60px] gentle-pulse">⏳</div>
+              <p className="text-2xl mt-4" style={{ color: 'var(--tayka-text-medium)' }}>
+                Loading products...
+              </p>
+            </div>
+          }
+        >
+          <ProductGrid />
+        </Suspense>
 
-      {/* Products */}
-      <Suspense
-        fallback={
-          <div className="py-16 text-center">
-            <div className="text-[60px] gentle-pulse">⏳</div>
-            <p className="text-2xl mt-4" style={{ color: 'var(--tayka-text-medium)' }}>
-              Loading products...
-            </p>
-          </div>
-        }
-      >
-        <ProductGrid />
-      </Suspense>
+        {/* Categorías */}
+        <CategoryCards />
 
-      {/* Help Section */}
-      <HelpSection />
-    </main>
+        {/* Help Section */}
+        <HelpSection />
+      </main>
+
+      {/* Footer */}
+      <FooterCustom />
+    </>
   );
 }
