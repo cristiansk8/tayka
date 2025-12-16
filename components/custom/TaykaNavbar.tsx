@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import CartModal from 'components/cart/modal';
 import { Suspense } from 'react';
 import { Search, User, ChevronDown } from 'lucide-react';
@@ -44,24 +45,31 @@ export default function TaykaNavbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo - Nunito SemiBold, Text Only */}
+            {/* Logo - Image with Editorial Minimalism */}
             <Link
               href="/"
-              className="flex items-center group"
+              className="flex items-center group relative"
             >
               <div
-                className="font-nunito font-semibold text-3xl tracking-tight transition-all duration-300"
+                className="relative transition-all duration-500 ease-out"
                 style={{
-                  color: scrolled ? 'var(--white)' : 'var(--primary-dark)',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.color = scrolled ? 'var(--warm-sand)' : 'var(--secondary-blue)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--primary-dark)';
+                  width: '140px',
+                  height: '48px',
                 }}
               >
-                Tayka
+                <Image
+                  src="/logo-taika.png"
+                  alt="Tayka - Talleres PDF para el Desarrollo Infantil"
+                  fill
+                  className="object-contain transition-all duration-500"
+                  style={{
+                    filter: scrolled
+                      ? 'brightness(0) invert(1)'
+                      : 'none',
+                    opacity: 1,
+                  }}
+                  priority
+                />
               </div>
             </Link>
 

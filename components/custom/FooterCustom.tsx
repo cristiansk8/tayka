@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail } from "lucide-react";
 
 export default function Footer() {
@@ -17,13 +18,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand & Description */}
           <div className="md:col-span-1">
-            <div
-              className="font-nunito font-semibold text-3xl mb-3 transition-colors duration-300"
-              style={{
-                color: 'var(--warm-sand)',
-              }}
-            >
-              Tayka
+            <div className="relative mb-4" style={{ width: '140px', height: '48px' }}>
+              <Image
+                src="/logo-taika.png"
+                alt="Tayka"
+                fill
+                className="object-contain"
+                style={{
+                  filter: 'brightness(0) invert(1)',
+                  opacity: 0.95,
+                }}
+              />
             </div>
             <p
               className="font-source text-sm leading-relaxed"
