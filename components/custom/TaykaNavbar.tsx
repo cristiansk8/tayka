@@ -3,128 +3,234 @@ import Link from 'next/link';
 import { useState } from 'react';
 import CartModal from 'components/cart/modal';
 import { Suspense } from 'react';
-import { Home, Gamepad2, Star, Heart, User } from 'lucide-react';
+import { Search, User, ChevronDown } from 'lucide-react';
 
 export default function TaykaNavbar() {
-  const [hearts] = useState(3); // Lives - videogame style
-  const [stars] = useState(0); // Points/stars
+  const [showAgeDropdown, setShowAgeDropdown] = useState(false);
 
-  // Nav items - videogame style
+  // Professional navigation - adult focused
   const navItems = [
-    { href: '/', icon: Home, label: 'Home', emoji: '🏠', color: 'var(--tayka-blue)' },
-    { href: '/search', icon: Gamepad2, label: 'Play', emoji: '🎮', color: 'var(--tayka-green)' },
-    { href: '/productos', icon: Star, label: 'Treasures', emoji: '⭐', color: 'var(--tayka-yellow)' },
-    { href: '/favoritos', icon: Heart, label: 'Favorites', emoji: '💖', color: 'var(--tayka-coral)' }
+    { href: '/', label: 'Inicio' },
+    { href: '/search', label: 'Talleres' },
+  ];
+
+  const ageCategories = [
+    { href: '/search/0-3-años', label: '0-3 años', description: 'Estimulación temprana' },
+    { href: '/search/3-6-años', label: '3-6 años', description: 'Preescolar' },
+    { href: '/search/6-mas-años', label: '6+ años', description: 'Escolar' },
   ];
 
   return (
     <>
-      {/* Barra superior estilo videojuego */}
-      <div
-        className="fixed top-0 left-0 right-0 z-50 h-16 shadow-lg"
+      {/* Professional Navigation Bar - Discovery Kids Inspired */}
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 shadow-sm"
         style={{
-          background: 'linear-gradient(135deg, var(--tayka-blue) 0%, var(--tayka-purple) 100%)',
-          borderBottom: '4px solid var(--tayka-purple)'
+          background: 'var(--warm-cream)',
+          borderBottom: '1px solid rgba(91, 143, 163, 0.15)'
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-          {/* Logo TAYKA - Estilo Pixel/Videojuego */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div
-              className="text-5xl font-bold tracking-wider tayka-transition"
-              style={{
-                fontFamily: '"Fredoka", "Comic Sans MS", cursive',
-                color: 'white',
-                textShadow: '4px 4px 0px rgba(0,0,0,0.2)',
-                letterSpacing: '2px'
-              }}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo - Nunito SemiBold, Text Only */}
+            <Link
+              href="/"
+              className="flex items-center group"
             >
-              TAYKA
-            </div>
-            <div className="text-3xl gentle-pulse">🎨</div>
-          </Link>
+              <div
+                className="font-nunito font-semibold text-3xl tracking-tight transition-colors duration-300"
+                style={{
+                  color: 'var(--calm-blue)',
+                }}
+              >
+                Tayka
+              </div>
+            </Link>
 
-          {/* Barra de estado (vidas y puntos) */}
-          <div className="hidden md:flex items-center gap-6">
-            {/* Vidas/Corazones */}
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 tayka-rounded-md">
-              <span className="text-white font-bold text-sm">Vidas:</span>
-              <div className="flex gap-1">
-                {[...Array(3)].map((_, i) => (
-                  <span key={i} className="text-2xl">
-                    {i < hearts ? '❤️' : '🤍'}
-                  </span>
-                ))}
+            {/* Main Navigation - Center */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="font-inter font-medium text-base transition-all duration-300 relative group"
+                  style={{
+                    color: 'var(--navy-blue)',
+                  }}
+                >
+                  {item.label}
+                  <span
+                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                    style={{
+                      background: 'var(--butter-yellow)',
+                    }}
+                  />
+                </Link>
+              ))}
+
+              {/* Dropdown - Por Edad */}
+              <div
+                className="relative"
+                onMouseEnter={() => setShowAgeDropdown(true)}
+                onMouseLeave={() => setShowAgeDropdown(false)}
+              >
+                <button
+                  className="font-inter font-medium text-base transition-all duration-300 flex items-center gap-1"
+                  style={{
+                    color: 'var(--navy-blue)',
+                  }}
+                >
+                  Por Edad
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform duration-300 ${showAgeDropdown ? 'rotate-180' : ''}`}
+                  />
+                </button>
+
+                {/* Dropdown Menu */}
+                {showAgeDropdown && (
+                  <div
+                    className="absolute top-full left-0 mt-2 w-56 rounded-lg shadow-lg overflow-hidden animate-slideDownFade"
+                    style={{
+                      background: 'var(--white)',
+                      border: '1px solid rgba(91, 143, 163, 0.15)',
+                    }}
+                  >
+                    {ageCategories.map((category) => (
+                      <Link
+                        key={category.href}
+                        href={category.href}
+                        className="block px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
+                        style={{
+                          color: 'var(--navy-blue)',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'var(--light-cream)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'transparent';
+                        }}
+                      >
+                        <div className="font-inter font-medium text-sm">
+                          {category.label}
+                        </div>
+                        <div
+                          className="font-source text-xs mt-1"
+                          style={{
+                            color: 'var(--warm-gray)',
+                          }}
+                        >
+                          {category.description}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 
-            {/* Estrellas/Puntos */}
-            <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 tayka-rounded-md">
-              <span className="text-3xl">⭐</span>
-              <span className="text-white font-bold text-xl">{stars}</span>
-            </div>
-          </div>
-
-          {/* Acciones de usuario */}
-          <div className="flex items-center gap-3">
-            {/* Cuenta de usuario */}
-            <Link
-              href="/account"
-              className="tayka-btn-icon"
-              aria-label="Mi cuenta"
-            >
-              <User className="h-6 w-6 text-white" />
-            </Link>
-
-            {/* Carrito */}
-            <div className="[&_svg]:text-white">
-              <Suspense fallback={null}>
-                <CartModal />
-              </Suspense>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navegación principal - Estilo botones de videojuego */}
-      <nav
-        className="fixed top-16 left-0 right-0 z-40 shadow-md"
-        style={{
-          background: 'var(--tayka-bg-main)',
-          borderBottom: '3px solid var(--tayka-purple)'
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          <div className="flex items-center justify-center gap-3 md:gap-6 overflow-x-auto">
-            {navItems.map((item) => (
+            {/* Right Actions - Icons Only */}
+            <div className="flex items-center gap-4">
+              {/* Search */}
               <Link
-                key={item.href}
-                href={item.href}
-                className="tayka-nav-button group"
+                href="/search"
+                className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                aria-label="Buscar talleres"
                 style={{
-                  background: `linear-gradient(135deg, ${item.color}, ${item.color}dd)`,
+                  color: 'var(--calm-blue)',
                 }}
               >
-                {/* Emoji grande */}
-                <span className="text-3xl md:text-4xl group-hover:scale-110 transition-transform duration-300">
-                  {item.emoji}
-                </span>
-
-                {/* Label */}
-                <span className="text-base md:text-lg font-bold text-white hidden sm:block">
-                  {item.label}
-                </span>
-
-                {/* Efecto brillo al hover */}
-                <div className="absolute inset-0 bg-white/0 group-hover:bg-white/20 tayka-rounded-md transition-all duration-300" />
+                <Search className="h-5 w-5" />
               </Link>
-            ))}
+
+              {/* Account */}
+              <Link
+                href="/account"
+                className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                aria-label="Mi cuenta"
+                style={{
+                  color: 'var(--calm-blue)',
+                }}
+              >
+                <User className="h-5 w-5" />
+              </Link>
+
+              {/* Cart */}
+              <div className="[&_svg]:h-5 [&_svg]:w-5" style={{ color: 'var(--calm-blue)' }}>
+                <Suspense fallback={null}>
+                  <CartModal />
+                </Suspense>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          <div className="md:hidden pb-4 pt-2">
+            <div className="flex items-center justify-around gap-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="font-inter font-medium text-sm px-4 py-2 rounded-md transition-colors duration-300"
+                  style={{
+                    color: 'var(--navy-blue)',
+                    background: 'transparent',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'var(--light-cream)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                  }}
+                >
+                  {item.label}
+                </Link>
+              ))}
+
+              {/* Mobile Dropdown for Age */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowAgeDropdown(!showAgeDropdown)}
+                  className="font-inter font-medium text-sm px-4 py-2 rounded-md transition-colors duration-300 flex items-center gap-1"
+                  style={{
+                    color: 'var(--navy-blue)',
+                    background: showAgeDropdown ? 'var(--light-cream)' : 'transparent',
+                  }}
+                >
+                  Por Edad
+                  <ChevronDown className={`w-3 h-3 transition-transform ${showAgeDropdown ? 'rotate-180' : ''}`} />
+                </button>
+
+                {showAgeDropdown && (
+                  <div
+                    className="absolute top-full right-0 mt-2 w-48 rounded-lg shadow-lg overflow-hidden z-50"
+                    style={{
+                      background: 'var(--white)',
+                      border: '1px solid rgba(91, 143, 163, 0.15)',
+                    }}
+                  >
+                    {ageCategories.map((category) => (
+                      <Link
+                        key={category.href}
+                        href={category.href}
+                        className="block px-4 py-2 font-inter text-sm border-b border-gray-100 last:border-b-0"
+                        style={{
+                          color: 'var(--navy-blue)',
+                        }}
+                        onClick={() => setShowAgeDropdown(false)}
+                      >
+                        {category.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Espaciador para el contenido */}
-      <div className="h-[136px]" />
+      {/* Spacer for fixed navbar */}
+      <div className="h-16 md:h-16" />
     </>
   );
 }

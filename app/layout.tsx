@@ -5,26 +5,37 @@ import { WelcomeToast } from 'components/welcome-toast';
 import CalmZone from '@/components/custom/CalmZone';
 import { PageProgress } from '@/components/ui/page-progress';
 import { WebVitals } from '@/components/web-vitals';
-import { GeistSans } from 'geist/font/sans';
 import { getCart } from 'lib/shopify';
 import type { ReactNode } from 'react';
 import { Toaster } from 'sonner';
 import './globals.css';
 import { baseUrl } from 'lib/utils';
-import localFont from 'next/font/local';
+import { Nunito, Inter, Source_Sans_3 } from 'next/font/google';
 
-const belleza = localFont({
-  src: '../fonts/Belleza-Regular.ttf',
-  variable: '--font-belleza',
+// Typography System - Discovery Kids Professional
+const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['600'], // SemiBold for logo only
+  variable: '--font-nunito',
+  display: 'swap',
 });
 
-const moderat = localFont({
-  src: '../fonts/Moderat-Black.ttf',
-  variable: '--font-moderat',
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // UI, headings, buttons, navigation
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ['latin'],
+  weight: ['400', '600'], // Body text, long descriptions
+  variable: '--font-source',
+  display: 'swap',
 });
 
 const siteName = 'Tayka';
-const siteSlogan = 'Games designed for unique minds';
+const siteSlogan = 'Talleres PDF para el Desarrollo Infantil';
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
@@ -32,21 +43,21 @@ export const metadata = {
     default: `${siteName} | ${siteSlogan}`,
     template: `%s | ${siteName}`
   },
-  description: 'Tayka - Pedagogical games specially designed for children with autism. Unique and accessible learning experiences.',
-  keywords: ['educational games', 'autism', 'pedagogy', 'children', 'learning', 'inclusion', 'accessibility'],
+  description: 'Talleres descargables en PDF para padres, educadores y cuidadores. Actividades estructuradas para trabajar en casa con niños, incluyendo niños con autismo.',
+  keywords: ['talleres pdf', 'desarrollo infantil', 'actividades para niños', 'educación en casa', 'autismo', 'padres', 'educadores', 'talleres descargables', 'pedagogía'],
   authors: [{ name: 'Tayka' }],
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'es_CO',
     url: baseUrl,
     siteName: siteName,
     title: `${siteName} | ${siteSlogan}`,
-    description: 'Pedagogical games specially designed for children with autism',
+    description: 'Talleres descargables en PDF para padres, educadores y cuidadores. Actividades estructuradas para el desarrollo infantil.',
   },
   twitter: {
     card: 'summary_large_image',
     title: `${siteName} | ${siteSlogan}`,
-    description: 'Pedagogical games specially designed for children with autism',
+    description: 'Talleres PDF para el desarrollo infantil. Descarga inmediata.',
   },
   robots: {
     follow: true,
@@ -55,7 +66,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#87CEEB' // Tayka blue
+  themeColor: '#5B8FA3' // Calm blue - new brand color
 };
 
 export default async function RootLayout({
@@ -67,7 +78,7 @@ export default async function RootLayout({
   const cart = getCart();
 
   return (
-    <html lang="es" className={`${GeistSans.variable} ${belleza.variable} ${moderat.variable}`}>
+    <html lang="es" className={`${inter.variable} ${nunito.variable} ${sourceSans.variable}`}>
       <head>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
