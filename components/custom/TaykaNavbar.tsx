@@ -44,7 +44,7 @@ export default function TaykaNavbar() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-24">
             {/* Logo - Image with Editorial Minimalism */}
             <Link
               href="/"
@@ -53,8 +53,8 @@ export default function TaykaNavbar() {
               <div
                 className="relative transition-all duration-500 ease-out"
                 style={{
-                  width: '140px',
-                  height: '48px',
+                  width: '280px',
+                  height: '96px',
                 }}
               >
                 <Image
@@ -304,7 +304,7 @@ export default function TaykaNavbar() {
       </nav>
 
       {/* Spacer for fixed navbar */}
-      <div className="h-16 md:h-16" />
+      <div className="h-24 md:h-24" />
     </>
   );
 }
