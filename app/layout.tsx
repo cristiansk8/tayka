@@ -66,7 +66,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#5B8FA3' // Calm blue - new brand color
+  themeColor: '#1F2A44' // Primary dark blue - Editorial Minimalism
 };
 
 export default async function RootLayout({

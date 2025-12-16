@@ -74,9 +74,9 @@ export default function CartModal() {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
+            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col p-6 backdrop-blur-xl md:w-[390px]" style={{ borderLeft: '1px solid var(--soft-gray)', background: 'rgba(255, 255, 255, 0.95)', color: 'var(--text-primary)' }}>
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">Mi Carrito</p>
+                <p className="font-inter text-lg font-semibold" style={{ color: 'var(--primary-dark)' }}>Mi Carrito</p>
                 <button aria-label="Cerrar carrito" onClick={closeCart}>
                   <CloseCart />
                 </button>
@@ -84,9 +84,9 @@ export default function CartModal() {
 
               {!cart || cart.lines.length === 0 ? (
                 <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
-                  <ShoppingCartIcon className="h-16" />
-                  <p className="mt-6 text-center text-2xl font-bold">
-                    Tu carrito está vacío.
+                  <ShoppingCartIcon className="h-16" style={{ color: 'var(--text-secondary)' }} />
+                  <p className="font-inter mt-6 text-center text-2xl font-semibold" style={{ color: 'var(--text-secondary)' }}>
+                    Tu carrito está vacío
                   </p>
                 </div>
               ) : (
@@ -119,7 +119,8 @@ export default function CartModal() {
                         return (
                           <li
                             key={i}
-                            className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700"
+                            className="flex w-full flex-col border-b"
+                            style={{ borderColor: 'var(--soft-gray)' }}
                           >
                             <div className="relative flex w-full flex-row justify-between px-1 py-4">
                               <div className="absolute z-40 -ml-1 -mt-2">
@@ -129,7 +130,7 @@ export default function CartModal() {
                                 />
                               </div>
                               <div className="flex flex-row">
-                                <div className="relative h-16 w-16 overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
+                                <div className="relative h-16 w-16 overflow-hidden border" style={{ borderRadius: 'var(--radius-md)', borderColor: 'var(--soft-gray)', background: 'var(--off-white)' }}>
                                   <Image
                                     className="h-full w-full object-cover"
                                     width={64}

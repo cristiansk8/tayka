@@ -35,7 +35,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: 'var(--navy-blue)',
+        background: 'var(--primary-dark)',
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -46,7 +46,7 @@ export default function Footer() {
             <div
               className="font-nunito font-semibold text-3xl mb-4"
               style={{
-                color: 'var(--warm-cream)',
+                color: 'var(--white)',
               }}
             >
               Tayka
@@ -54,8 +54,8 @@ export default function Footer() {
             <p
               className="font-source text-sm leading-relaxed mb-6"
               style={{
-                color: 'var(--warm-cream)',
-                opacity: 0.8,
+                color: 'var(--white)',
+                opacity: 0.75,
               }}
             >
               Talleres PDF para el desarrollo infantil. Recursos profesionales para padres, educadores y cuidadores.
@@ -67,7 +67,7 @@ export default function Footer() {
             <h4
               className="font-inter font-semibold text-base mb-6"
               style={{
-                color: 'var(--warm-cream)',
+                color: 'var(--white)',
               }}
             >
               Talleres
@@ -78,16 +78,16 @@ export default function Footer() {
                   href="/search/0-3-años"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   0-3 años
@@ -98,16 +98,16 @@ export default function Footer() {
                   href="/search/3-6-años"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   3-6 años
@@ -118,16 +118,16 @@ export default function Footer() {
                   href="/search/6-mas-años"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   6+ años
@@ -138,16 +138,16 @@ export default function Footer() {
                   href="/search"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   Ver todos
@@ -161,7 +161,7 @@ export default function Footer() {
             <h4
               className="font-inter font-semibold text-base mb-6"
               style={{
-                color: 'var(--warm-cream)',
+                color: 'var(--white)',
               }}
             >
               Soporte y Legal
@@ -172,16 +172,16 @@ export default function Footer() {
                   href="/terminos-del-servicio"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   Términos del servicio
@@ -192,16 +192,16 @@ export default function Footer() {
                   href="/politica-proteccion-datos"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   Privacidad
@@ -212,16 +212,16 @@ export default function Footer() {
                   href="/politica-reembolso"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   Reembolsos
@@ -232,16 +232,16 @@ export default function Footer() {
                   href="/terminos-y-condiciones"
                   className="font-source text-sm transition-colors duration-200"
                   style={{
-                    color: 'var(--warm-cream)',
-                    opacity: 0.7,
+                    color: 'var(--white)',
+                    opacity: 0.65,
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.color = 'var(--mint-green)';
+                    e.currentTarget.style.color = 'var(--warm-sand)';
                     e.currentTarget.style.opacity = '1';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = 'var(--warm-cream)';
-                    e.currentTarget.style.opacity = '0.7';
+                    e.currentTarget.style.color = 'var(--white)';
+                    e.currentTarget.style.opacity = '0.65';
                   }}
                 >
                   Términos y condiciones
@@ -255,7 +255,7 @@ export default function Footer() {
             <h4
               className="font-inter font-semibold text-base mb-6"
               style={{
-                color: 'var(--warm-cream)',
+                color: 'var(--white)',
               }}
             >
               Newsletter
@@ -263,8 +263,8 @@ export default function Footer() {
             <p
               className="font-source text-sm mb-4 leading-relaxed"
               style={{
-                color: 'var(--warm-cream)',
-                opacity: 0.8,
+                color: 'var(--white)',
+                opacity: 0.75,
               }}
             >
               Recibe novedades sobre nuevos talleres y descuentos exclusivos.
@@ -277,28 +277,30 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   disabled={isSubmitting}
-                  className="font-source px-4 py-2 rounded-md focus:outline-none focus:ring-2 disabled:opacity-50 transition-all"
+                  className="font-source px-4 py-2 focus:outline-none focus:ring-2 disabled:opacity-50 transition-all"
                   style={{
-                    background: 'rgba(255, 248, 231, 0.1)',
-                    color: 'var(--warm-cream)',
-                    border: '1px solid rgba(255, 248, 231, 0.3)',
+                    background: 'rgba(255, 255, 255, 0.1)',
+                    color: 'var(--white)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    borderRadius: 'var(--radius-md)',
                   }}
                 />
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="font-inter font-medium px-4 py-2 rounded-md transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="font-inter font-medium px-4 py-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   style={{
-                    background: 'var(--calm-blue)',
+                    background: 'var(--secondary-blue)',
                     color: 'white',
+                    borderRadius: 'var(--radius-md)',
                   }}
                   onMouseEnter={(e) => {
                     if (!isSubmitting) {
-                      e.currentTarget.style.background = 'var(--mint-green)';
+                      e.currentTarget.style.background = 'var(--sage-green)';
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'var(--calm-blue)';
+                    e.currentTarget.style.background = 'var(--secondary-blue)';
                   }}
                 >
                   {isSubmitting ? 'Suscribiendo...' : 'Suscribirse'}
@@ -309,24 +311,24 @@ export default function Footer() {
               <Mail
                 className="h-4 w-4 flex-shrink-0"
                 style={{
-                  color: 'var(--warm-cream)',
-                  opacity: 0.6,
+                  color: 'var(--white)',
+                  opacity: 0.5,
                 }}
               />
               <a
                 href="mailto:contacto@tayka.com"
                 className="font-source text-sm transition-colors duration-200"
                 style={{
-                  color: 'var(--warm-cream)',
-                  opacity: 0.7,
+                  color: 'var(--white)',
+                  opacity: 0.65,
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = 'var(--mint-green)';
+                  e.currentTarget.style.color = 'var(--warm-sand)';
                   e.currentTarget.style.opacity = '1';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = 'var(--warm-cream)';
-                  e.currentTarget.style.opacity = '0.7';
+                  e.currentTarget.style.color = 'var(--white)';
+                  e.currentTarget.style.opacity = '0.65';
                 }}
               >
                 contacto@tayka.com
@@ -338,7 +340,7 @@ export default function Footer() {
         <hr
           className="mb-8"
           style={{
-            borderColor: 'rgba(255, 248, 231, 0.2)',
+            borderColor: 'rgba(255, 255, 255, 0.15)',
           }}
         />
 
@@ -348,8 +350,8 @@ export default function Footer() {
             <p
               className="font-source text-xs"
               style={{
-                color: 'var(--warm-cream)',
-                opacity: 0.6,
+                color: 'var(--white)',
+                opacity: 0.5,
               }}
             >
               © {new Date().getFullYear()} Tayka. Talleres educativos PDF.
@@ -357,8 +359,8 @@ export default function Footer() {
             <span
               className="font-source text-xs"
               style={{
-                color: 'var(--warm-cream)',
-                opacity: 0.6,
+                color: 'var(--white)',
+                opacity: 0.5,
               }}
             >
               Colombia (COP $)
@@ -367,11 +369,11 @@ export default function Footer() {
           <p
             className="font-source text-xs"
             style={{
-              color: 'var(--warm-cream)',
-              opacity: 0.5,
+              color: 'var(--white)',
+              opacity: 0.4,
             }}
           >
-            Productos digitales • Descarga inmediata
+            Productos digitales - Descarga inmediata
           </p>
         </div>
       </div>

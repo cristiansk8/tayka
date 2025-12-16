@@ -4,36 +4,37 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /* === TAYKA - Professional Discovery Kids Inspired Design === */
-  /* PDF Workshops E-commerce - Adult Focused, Child Appropriate */
+  /* === TAYKA - Editorial Minimalism Design System === */
+  /* PDF Workshops E-commerce - Sophisticated, Professional, Trustworthy */
 
-  /* --- PRIMARY COLOR PALETTE (Discovery Kids Professional) --- */
-  /* Use ONLY these 5 colors throughout the site */
+  /* --- PRIMARY COLOR PALETTE (Editorial Minimalism) --- */
+  /* Use ONLY these 6 colors throughout the site */
 
   /* Main Brand Colors */
-  --calm-blue: #5B8FA3;        /* UI base, headers, primary buttons */
-  --butter-yellow: #F9D56E;    /* Accents, icons, highlights */
-  --mint-green: #A8D5BA;       /* Positive states, success messages */
-  --soft-coral: #F4A09B;       /* Secondary CTAs, price accents */
-  --warm-cream: #FFF8E7;       /* Backgrounds, reading areas */
+  --primary-dark: #1F2A44;      /* Primary dark blue - headers, primary text, CTA buttons */
+  --secondary-blue: #4A6FA5;    /* Secondary soft blue - secondary CTAs, links, accents */
+  --warm-sand: #E6D5B8;         /* Warm sand accent - highlights, badges, warm touches */
+  --sage-green: #8FAF9F;        /* Sage green accent - success states, positive feedback */
+  --off-white: #F7F7F5;         /* Off-white background - main background, reading areas */
+  --soft-gray: #D9D9D9;         /* Soft supporting gray - borders, dividers, subtle elements */
 
-  /* --- SUPPORTING COLORS --- */
+  /* --- SUPPORTING COLORS (Derived from palette) --- */
   /* Text & Structure */
-  --navy-blue: #2C4A5C;        /* Dark text, headers, important content */
-  --warm-gray: #6B7C8C;        /* Body text, secondary text */
-  --light-cream: #FFFBF0;      /* Card backgrounds, alternate sections */
-  --white: #FFFFFF;            /* Pure white for contrast */
+  --text-primary: var(--primary-dark);    /* Main text color */
+  --text-secondary: #5A6B8A;              /* Secondary text (lightened primary-dark) */
+  --text-muted: #8A9BB3;                  /* Muted text (further lightened) */
+  --white: #FFFFFF;                       /* Pure white for contrast */
 
-  /* --- STATE COLORS --- */
-  --success: #7BC9A8;          /* Success messages, completion */
-  --error: #E88B7F;            /* Errors, warnings */
-  --warning: #F9C74F;          /* Attention, caution */
-  --info: #6BA8C4;             /* Information, tips */
+  /* --- STATE COLORS (Adapted from palette) --- */
+  --success: var(--sage-green);           /* Success messages, completion */
+  --error: #C47B7B;                       /* Errors (muted red derived from palette) */
+  --warning: #D4B896;                     /* Warnings (darker warm-sand) */
+  --info: var(--secondary-blue);          /* Information, tips */
 
   /* --- TYPOGRAPHY VARIABLES --- */
-  --font-nunito: var(--font-nunito);     /* Logo only - Nunito SemiBold */
-  --font-inter: var(--font-inter);       /* UI, headings, navigation, buttons */
-  --font-source: var(--font-source);     /* Body text, long descriptions */
+  --font-nunito: var(--font-nunito);      /* Logo only - Nunito SemiBold */
+  --font-inter: var(--font-inter);        /* UI, headings, navigation, buttons */
+  --font-source: var(--font-source);      /* Body text, long descriptions */
 
   /* --- SPACING SYSTEM (Consistent) --- */
   --spacing-xs: 0.5rem;   /* 8px */
@@ -43,23 +44,27 @@
   --spacing-xl: 3rem;     /* 48px */
   --spacing-2xl: 4rem;    /* 64px */
 
-  /* --- BORDER RADIUS (Softer, Professional) --- */
-  --radius-sm: 4px;       /* Small elements, badges */
-  --radius-md: 8px;       /* Cards, inputs, buttons */
-  --radius-lg: 12px;      /* Large sections, modals */
-  --radius-xl: 16px;      /* Featured elements, hero sections */
+  /* --- BORDER RADIUS (Editorial Minimalism - Softer) --- */
+  --radius-sm: 2px;       /* Small elements, badges - minimal */
+  --radius-md: 4px;       /* Cards, inputs, buttons - subtle */
+  --radius-lg: 8px;       /* Large sections, modals - gentle */
+  --radius-xl: 12px;      /* Featured elements, hero sections - soft */
 
-  /* --- SHADOWS (Subtle, Professional) --- */
-  --shadow-sm: 0 1px 3px rgba(44, 74, 92, 0.08);
-  --shadow-md: 0 4px 12px rgba(44, 74, 92, 0.12);
-  --shadow-lg: 0 8px 24px rgba(44, 74, 92, 0.15);
-  --shadow-xl: 0 12px 32px rgba(44, 74, 92, 0.18);
+  /* --- SHADOWS (Subtle, Editorial) --- */
+  --shadow-sm: 0 1px 2px rgba(31, 42, 68, 0.04);
+  --shadow-md: 0 2px 8px rgba(31, 42, 68, 0.06);
+  --shadow-lg: 0 4px 16px rgba(31, 42, 68, 0.08);
+  --shadow-xl: 0 8px 24px rgba(31, 42, 68, 0.1);
+
+  /* --- TEXTURES (Editorial Paper-like) --- */
+  --texture-noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
 
   /* --- MAIN SYSTEM VARIABLES --- */
-  --background: var(--warm-cream);
-  --foreground: var(--navy-blue);
+  --background: var(--off-white);
+  --foreground: var(--primary-dark);
   --card-background: var(--white);
-  --accent: var(--calm-blue);
+  --accent: var(--secondary-blue);
+  --border: var(--soft-gray);
 }
 
 @layer base {
@@ -134,12 +139,13 @@ body {
   line-height: 1.6;
 }
 
-/* Headings - Inter (Professional, Clean) */
+/* Headings - Inter (Editorial, Clean) */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-inter), system-ui, sans-serif;
   font-weight: 600;
-  color: var(--navy-blue);
+  color: var(--primary-dark);
   line-height: 1.3;
+  letter-spacing: -0.02em;
 }
 
 a,

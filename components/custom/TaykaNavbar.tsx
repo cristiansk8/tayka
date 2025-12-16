@@ -22,12 +22,13 @@ export default function TaykaNavbar() {
 
   return (
     <>
-      {/* Professional Navigation Bar - Discovery Kids Inspired */}
+      {/* Professional Navigation Bar - Editorial Minimalism */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50 shadow-sm"
+        className="fixed top-0 left-0 right-0 z-50"
         style={{
-          background: 'var(--warm-cream)',
-          borderBottom: '1px solid rgba(91, 143, 163, 0.15)'
+          background: 'var(--white)',
+          borderBottom: '1px solid var(--soft-gray)',
+          boxShadow: 'var(--shadow-sm)'
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +41,7 @@ export default function TaykaNavbar() {
               <div
                 className="font-nunito font-semibold text-3xl tracking-tight transition-colors duration-300"
                 style={{
-                  color: 'var(--calm-blue)',
+                  color: 'var(--primary-dark)',
                 }}
               >
                 Tayka
@@ -55,14 +56,14 @@ export default function TaykaNavbar() {
                   href={item.href}
                   className="font-inter font-medium text-base transition-all duration-300 relative group"
                   style={{
-                    color: 'var(--navy-blue)',
+                    color: 'var(--text-primary)',
                   }}
                 >
                   {item.label}
                   <span
                     className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
                     style={{
-                      background: 'var(--butter-yellow)',
+                      background: 'var(--secondary-blue)',
                     }}
                   />
                 </Link>
@@ -77,7 +78,7 @@ export default function TaykaNavbar() {
                 <button
                   className="font-inter font-medium text-base transition-all duration-300 flex items-center gap-1"
                   style={{
-                    color: 'var(--navy-blue)',
+                    color: 'var(--text-primary)',
                   }}
                 >
                   Por Edad
@@ -89,22 +90,25 @@ export default function TaykaNavbar() {
                 {/* Dropdown Menu */}
                 {showAgeDropdown && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-56 rounded-lg shadow-lg overflow-hidden animate-slideDownFade"
+                    className="absolute top-full left-0 mt-2 w-56 overflow-hidden animate-slideDownFade"
                     style={{
                       background: 'var(--white)',
-                      border: '1px solid rgba(91, 143, 163, 0.15)',
+                      border: '1px solid var(--soft-gray)',
+                      borderRadius: 'var(--radius-md)',
+                      boxShadow: 'var(--shadow-md)',
                     }}
                   >
                     {ageCategories.map((category) => (
                       <Link
                         key={category.href}
                         href={category.href}
-                        className="block px-4 py-3 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
+                        className="block px-4 py-3 transition-colors duration-200 border-b last:border-b-0"
                         style={{
-                          color: 'var(--navy-blue)',
+                          color: 'var(--text-primary)',
+                          borderColor: 'var(--soft-gray)',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'var(--light-cream)';
+                          e.currentTarget.style.background = 'var(--off-white)';
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.background = 'transparent';
@@ -116,7 +120,7 @@ export default function TaykaNavbar() {
                         <div
                           className="font-source text-xs mt-1"
                           style={{
-                            color: 'var(--warm-gray)',
+                            color: 'var(--text-secondary)',
                           }}
                         >
                           {category.description}
@@ -133,10 +137,11 @@ export default function TaykaNavbar() {
               {/* Search */}
               <Link
                 href="/search"
-                className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 hover:scale-110"
                 aria-label="Buscar talleres"
                 style={{
-                  color: 'var(--calm-blue)',
+                  color: 'var(--text-primary)',
+                  borderRadius: 'var(--radius-md)',
                 }}
               >
                 <Search className="h-5 w-5" />
@@ -145,17 +150,18 @@ export default function TaykaNavbar() {
               {/* Account */}
               <Link
                 href="/account"
-                className="p-2 rounded-lg transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 hover:scale-110"
                 aria-label="Mi cuenta"
                 style={{
-                  color: 'var(--calm-blue)',
+                  color: 'var(--text-primary)',
+                  borderRadius: 'var(--radius-md)',
                 }}
               >
                 <User className="h-5 w-5" />
               </Link>
 
               {/* Cart */}
-              <div className="[&_svg]:h-5 [&_svg]:w-5" style={{ color: 'var(--calm-blue)' }}>
+              <div className="[&_svg]:h-5 [&_svg]:w-5" style={{ color: 'var(--text-primary)' }}>
                 <Suspense fallback={null}>
                   <CartModal />
                 </Suspense>
@@ -170,13 +176,14 @@ export default function TaykaNavbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="font-inter font-medium text-sm px-4 py-2 rounded-md transition-colors duration-300"
+                  className="font-inter font-medium text-sm px-4 py-2 transition-colors duration-300"
                   style={{
-                    color: 'var(--navy-blue)',
+                    color: 'var(--text-primary)',
                     background: 'transparent',
+                    borderRadius: 'var(--radius-md)',
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = 'var(--light-cream)';
+                    e.currentTarget.style.background = 'var(--off-white)';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = 'transparent';
@@ -190,10 +197,11 @@ export default function TaykaNavbar() {
               <div className="relative">
                 <button
                   onClick={() => setShowAgeDropdown(!showAgeDropdown)}
-                  className="font-inter font-medium text-sm px-4 py-2 rounded-md transition-colors duration-300 flex items-center gap-1"
+                  className="font-inter font-medium text-sm px-4 py-2 transition-colors duration-300 flex items-center gap-1"
                   style={{
-                    color: 'var(--navy-blue)',
-                    background: showAgeDropdown ? 'var(--light-cream)' : 'transparent',
+                    color: 'var(--text-primary)',
+                    background: showAgeDropdown ? 'var(--off-white)' : 'transparent',
+                    borderRadius: 'var(--radius-md)',
                   }}
                 >
                   Por Edad
@@ -202,19 +210,22 @@ export default function TaykaNavbar() {
 
                 {showAgeDropdown && (
                   <div
-                    className="absolute top-full right-0 mt-2 w-48 rounded-lg shadow-lg overflow-hidden z-50"
+                    className="absolute top-full right-0 mt-2 w-48 overflow-hidden z-50"
                     style={{
                       background: 'var(--white)',
-                      border: '1px solid rgba(91, 143, 163, 0.15)',
+                      border: '1px solid var(--soft-gray)',
+                      borderRadius: 'var(--radius-md)',
+                      boxShadow: 'var(--shadow-md)',
                     }}
                   >
                     {ageCategories.map((category) => (
                       <Link
                         key={category.href}
                         href={category.href}
-                        className="block px-4 py-2 font-inter text-sm border-b border-gray-100 last:border-b-0"
+                        className="block px-4 py-2 font-inter text-sm border-b last:border-b-0"
                         style={{
-                          color: 'var(--navy-blue)',
+                          color: 'var(--text-primary)',
+                          borderColor: 'var(--soft-gray)',
                         }}
                         onClick={() => setShowAgeDropdown(false)}
                       >
