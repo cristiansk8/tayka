@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
-import AnnouncementBar from '@/components/custom/AnnouncementBar';
 
 export async function generateMetadata(props: {
   params: Promise<{ collection: string }>;
@@ -38,8 +37,6 @@ export default async function CategoryPage(props: {
 
   return (
     <>
-      <AnnouncementBar />
-
       {/* Collection Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6">

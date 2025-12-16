@@ -5,7 +5,6 @@ import { notFound } from 'next/navigation';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
-import AnnouncementBar from '@/components/custom/AnnouncementBar';
 import CategorySectionMinimal from '@/components/custom/CategorySectionMinimal';
 import FooterCustom from '@/components/custom/FooterCustom';
 
@@ -51,8 +50,6 @@ export default async function CategoryPage({
 
   return (
     <section>
-      <AnnouncementBar />
-
       {/* Categorías minimalistas */}
       <div className="bg-white">
         <CategorySectionMinimal collections={collections} />

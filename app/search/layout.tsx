@@ -1,7 +1,6 @@
 import ChildrenWrapper from './children-wrapper';
 import { Suspense } from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
-import AnnouncementBar from '@/components/custom/AnnouncementBar';
 import CategorySectionMinimal from '@/components/custom/CategorySectionMinimal';
 import { getCollections } from 'lib/shopify';
 
@@ -10,15 +9,13 @@ async function CategorySectionWrapper() {
   return <CategorySectionMinimal collections={collections} />;
 }
 
-export default function SearchLayout({ 
+export default function SearchLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
-      <AnnouncementBar />
-
       {/* Main container with padding-top for fixed navbar */}
       <div className="bg-white">
         <Suspense fallback={<div className="h-40 bg-[#f8f7f4]" />}>

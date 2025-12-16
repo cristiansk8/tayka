@@ -6,7 +6,6 @@ import { Suspense } from 'react';
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
-import AnnouncementBar from '@/components/custom/AnnouncementBar';
 import CategorySectionMinimal from '@/components/custom/CategorySectionMinimal';
 import FooterCustom from '@/components/custom/FooterCustom';
 
@@ -35,8 +34,6 @@ export default async function DescuentosPage(props: {
 
   return (
     <>
-      <AnnouncementBar />
-
       {/* Category Carousel */}
       <Suspense fallback={<div className="h-40 bg-white" />}>
         <CategorySectionWrapper />
