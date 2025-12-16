@@ -74,24 +74,53 @@ export default function CartModal() {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col p-6 backdrop-blur-xl md:w-[390px]" style={{ borderLeft: '1px solid var(--soft-gray)', background: 'rgba(255, 255, 255, 0.95)', color: 'var(--text-primary)' }}>
-              <div className="flex items-center justify-between">
-                <p className="font-inter text-lg font-semibold" style={{ color: 'var(--primary-dark)' }}>Mi Carrito</p>
-                <button aria-label="Cerrar carrito" onClick={closeCart}>
+            <Dialog.Panel
+              className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col backdrop-blur-xl md:w-[420px]"
+              style={{
+                borderLeft: '3px solid var(--warm-sand)',
+                background: 'linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%)',
+                color: 'var(--text-primary)',
+                boxShadow: 'var(--shadow-xl)'
+              }}
+            >
+              {/* Header */}
+              <div
+                className="flex items-center justify-between px-6 py-5"
+                style={{
+                  background: 'linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 100%)',
+                  borderBottom: '2px solid var(--warm-sand)'
+                }}
+              >
+                <h2 className="font-inter text-xl font-semibold" style={{ color: 'var(--white)' }}>
+                  My Cart
+                </h2>
+                <button
+                  aria-label="Close cart"
+                  onClick={closeCart}
+                  className="transition-all duration-200 hover:scale-110"
+                >
                   <CloseCart />
                 </button>
               </div>
 
               {!cart || cart.lines.length === 0 ? (
-                <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
-                  <ShoppingCartIcon className="h-16" style={{ color: 'var(--text-secondary)' }} />
-                  <p className="font-inter mt-6 text-center text-2xl font-semibold" style={{ color: 'var(--text-secondary)' }}>
-                    Tu carrito está vacío
+                <div className="mt-32 flex w-full flex-col items-center justify-center overflow-hidden px-6">
+                  <div
+                    className="mb-6 p-6 rounded-full"
+                    style={{ background: 'var(--off-white)' }}
+                  >
+                    <ShoppingCartIcon className="h-20 w-20" style={{ color: 'var(--sage-green)' }} />
+                  </div>
+                  <h3 className="font-inter text-2xl font-semibold mb-3" style={{ color: 'var(--primary-dark)' }}>
+                    Your cart is empty
+                  </h3>
+                  <p className="font-source text-base text-center" style={{ color: 'var(--text-secondary)' }}>
+                    Add PDF workshops to get started
                   </p>
                 </div>
               ) : (
-                <div className="flex h-full flex-col justify-between overflow-hidden p-1">
-                  <ul className="grow overflow-auto py-4">
+                <div className="flex h-full flex-col justify-between overflow-hidden">
+                  <ul className="grow overflow-auto py-4 px-6">
                     {cart.lines
                       .sort((a, b) =>
                         a.merchandise.product.title.localeCompare(
@@ -119,22 +148,32 @@ export default function CartModal() {
                         return (
                           <li
                             key={i}
-                            className="flex w-full flex-col border-b"
-                            style={{ borderColor: 'var(--soft-gray)' }}
+                            className="flex w-full flex-col mb-4 rounded-lg overflow-hidden transition-all duration-200 hover:shadow-md"
+                            style={{
+                              border: '1px solid var(--soft-gray)',
+                              background: 'var(--white)'
+                            }}
                           >
-                            <div className="relative flex w-full flex-row justify-between px-1 py-4">
-                              <div className="absolute z-40 -ml-1 -mt-2">
+                            <div className="relative flex w-full flex-row justify-between p-4">
+                              <div className="absolute z-40 -ml-2 -mt-2">
                                 <DeleteItemButton
                                   item={item}
                                   optimisticUpdate={updateCartItem}
                                 />
                               </div>
-                              <div className="flex flex-row">
-                                <div className="relative h-16 w-16 overflow-hidden border" style={{ borderRadius: 'var(--radius-md)', borderColor: 'var(--soft-gray)', background: 'var(--off-white)' }}>
+                              <div className="flex flex-row flex-1">
+                                <div
+                                  className="relative h-20 w-20 overflow-hidden flex-shrink-0"
+                                  style={{
+                                    borderRadius: 'var(--radius-lg)',
+                                    border: '2px solid var(--warm-sand)',
+                                    background: 'var(--off-white)'
+                                  }}
+                                >
                                   <Image
                                     className="h-full w-full object-cover"
-                                    width={64}
-                                    height={64}
+                                    width={80}
+                                    height={80}
                                     alt={
                                       item.merchandise.product.featuredImage
                                         .altText ||
@@ -145,48 +184,65 @@ export default function CartModal() {
                                     }
                                   />
                                 </div>
-                                <Link
-                                  href={merchandiseUrl}
-                                  onClick={closeCart}
-                                  className="z-30 ml-2 flex flex-row space-x-4"
-                                >
-                                  <div className="flex flex-1 flex-col text-base">
-                                    <span className="leading-tight">
+                                <div className="flex-1 ml-4 flex flex-col justify-between">
+                                  <Link
+                                    href={merchandiseUrl}
+                                    onClick={closeCart}
+                                    className="z-30"
+                                  >
+                                    <h4
+                                      className="font-inter font-medium text-base leading-tight hover:opacity-70 transition-opacity"
+                                      style={{ color: 'var(--primary-dark)' }}
+                                    >
                                       {item.merchandise.product.title}
-                                    </span>
+                                    </h4>
                                     {item.merchandise.title !==
                                     DEFAULT_OPTION ? (
-                                      <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                                      <p
+                                        className="font-source text-sm mt-1"
+                                        style={{ color: 'var(--text-secondary)' }}
+                                      >
                                         {item.merchandise.title}
                                       </p>
                                     ) : null}
+                                  </Link>
+                                  <div className="flex items-center justify-between mt-2">
+                                    <Price
+                                      className="font-inter font-semibold text-lg"
+                                      amount={item.cost.totalAmount.amount}
+                                      currencyCode={
+                                        item.cost.totalAmount.currencyCode
+                                      }
+                                      style={{ color: 'var(--secondary-blue)' }}
+                                    />
+                                    <div
+                                      className="flex h-9 flex-row items-center"
+                                      style={{
+                                        borderRadius: 'var(--radius-md)',
+                                        border: '1px solid var(--soft-gray)',
+                                        background: 'var(--off-white)'
+                                      }}
+                                    >
+                                      <EditItemQuantityButton
+                                        item={item}
+                                        type="minus"
+                                        optimisticUpdate={updateCartItem}
+                                      />
+                                      <p className="w-8 text-center">
+                                        <span
+                                          className="font-inter text-sm font-medium"
+                                          style={{ color: 'var(--primary-dark)' }}
+                                        >
+                                          {item.quantity}
+                                        </span>
+                                      </p>
+                                      <EditItemQuantityButton
+                                        item={item}
+                                        type="plus"
+                                        optimisticUpdate={updateCartItem}
+                                      />
+                                    </div>
                                   </div>
-                                </Link>
-                              </div>
-                              <div className="flex h-16 flex-col justify-between">
-                                <Price
-                                  className="flex justify-end space-y-2 text-right text-sm"
-                                  amount={item.cost.totalAmount.amount}
-                                  currencyCode={
-                                    item.cost.totalAmount.currencyCode
-                                  }
-                                />
-                                <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
-                                  <EditItemQuantityButton
-                                    item={item}
-                                    type="minus"
-                                    optimisticUpdate={updateCartItem}
-                                  />
-                                  <p className="w-6 text-center">
-                                    <span className="w-full text-sm">
-                                      {item.quantity}
-                                    </span>
-                                  </p>
-                                  <EditItemQuantityButton
-                                    item={item}
-                                    type="plus"
-                                    optimisticUpdate={updateCartItem}
-                                  />
                                 </div>
                               </div>
                             </div>
@@ -194,29 +250,52 @@ export default function CartModal() {
                         );
                       })}
                   </ul>
-                  <div className="py-4 text-sm text-neutral-500 dark:text-neutral-400">
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
-                      <p>Impuestos</p>
-                      <Price
-                        className="text-right text-base text-black dark:text-white"
-                        amount={cart.cost.totalTaxAmount.amount}
-                        currencyCode={cart.cost.totalTaxAmount.currencyCode}
-                      />
+
+                  {/* Summary Section */}
+                  <div
+                    className="px-6 py-5"
+                    style={{
+                      background: 'var(--off-white)',
+                      borderTop: '2px solid var(--warm-sand)'
+                    }}
+                  >
+                    <div className="space-y-3 mb-4">
+                      <div className="flex items-center justify-between">
+                        <p className="font-source text-sm" style={{ color: 'var(--text-secondary)' }}>
+                          Taxes
+                        </p>
+                        <Price
+                          className="font-inter text-sm font-medium"
+                          amount={cart.cost.totalTaxAmount.amount}
+                          currencyCode={cart.cost.totalTaxAmount.currencyCode}
+                          style={{ color: 'var(--text-primary)' }}
+                        />
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <p className="font-source text-sm" style={{ color: 'var(--text-secondary)' }}>
+                          Shipping
+                        </p>
+                        <p className="font-inter text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+                          Calculated at checkout
+                        </p>
+                      </div>
+                      <div
+                        className="flex items-center justify-between pt-3"
+                        style={{ borderTop: '1px solid var(--soft-gray)' }}
+                      >
+                        <p className="font-inter text-lg font-semibold" style={{ color: 'var(--primary-dark)' }}>
+                          Total
+                        </p>
+                        <Price
+                          className="font-inter text-xl font-bold"
+                          amount={cart.cost.totalAmount.amount}
+                          currencyCode={cart.cost.totalAmount.currencyCode}
+                          style={{ color: 'var(--secondary-blue)' }}
+                        />
+                      </div>
                     </div>
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Envío</p>
-                      <p className="text-right">Calculado al finalizar</p>
-                    </div>
-                    <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Total</p>
-                      <Price
-                        className="text-right text-base text-black dark:text-white"
-                        amount={cart.cost.totalAmount.amount}
-                        currencyCode={cart.cost.totalAmount.currencyCode}
-                      />
-                    </div>
+                    <CheckoutButton />
                   </div>
-                  <CheckoutButton />
                 </div>
               )}
             </Dialog.Panel>
@@ -229,12 +308,20 @@ export default function CartModal() {
 
 function CloseCart({ className }: { className?: string }) {
   return (
-    <div className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white">
+    <div
+      className="relative flex h-10 w-10 items-center justify-center transition-all duration-200 hover:scale-110"
+      style={{
+        borderRadius: 'var(--radius-md)',
+        background: 'rgba(255, 255, 255, 0.2)',
+        border: '1px solid rgba(255, 255, 255, 0.3)'
+      }}
+    >
       <XMarkIcon
         className={clsx(
-          'h-6 transition-all ease-in-out hover:scale-110',
+          'h-6 transition-all ease-in-out',
           className
         )}
+        style={{ color: 'var(--white)' }}
       />
     </div>
   );
@@ -265,11 +352,28 @@ function CheckoutButton() {
 
   return (
     <button
-      className="font-moderat block w-full bg-[#620c0b] p-3 text-center text-sm font-medium text-white hover:bg-[#4a0908] transition-colors duration-300 tracking-wide uppercase disabled:opacity-50"
+      className="font-inter block w-full py-4 text-center text-base font-semibold transition-all duration-300 disabled:opacity-50 hover:scale-[1.02] active:scale-[0.98]"
+      style={{
+        background: 'linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 100%)',
+        color: 'var(--white)',
+        borderRadius: 'var(--radius-lg)',
+        boxShadow: 'var(--shadow-md)',
+        letterSpacing: '0.3px'
+      }}
       onClick={handleCheckout}
       disabled={isPending}
+      onMouseEnter={(e) => {
+        if (!isPending) {
+          e.currentTarget.style.boxShadow = 'var(--shadow-lg)';
+          e.currentTarget.style.background = 'linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-dark) 100%)';
+        }
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.boxShadow = 'var(--shadow-md)';
+        e.currentTarget.style.background = 'linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 100%)';
+      }}
     >
-      {isPending ? <LoadingDots className="bg-white" /> : 'Proceder al Pago'}
+      {isPending ? <LoadingDots className="bg-white" /> : 'Proceed to Checkout'}
     </button>
   );
 }
