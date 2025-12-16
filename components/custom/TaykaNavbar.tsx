@@ -1,12 +1,21 @@
 'use client';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CartModal from 'components/cart/modal';
 import { Suspense } from 'react';
 import { Search, User, ChevronDown } from 'lucide-react';
 
 export default function TaykaNavbar() {
   const [showAgeDropdown, setShowAgeDropdown] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Professional navigation - adult focused
   const navItems = [
@@ -22,13 +31,15 @@ export default function TaykaNavbar() {
 
   return (
     <>
-      {/* Professional Navigation Bar - Editorial Minimalism */}
+      {/* Professional Navigation Bar - Editorial Minimalism with Scroll Effects */}
       <nav
-        className="fixed top-0 left-0 right-0 z-50"
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: 'var(--white)',
-          borderBottom: '1px solid var(--soft-gray)',
-          boxShadow: 'var(--shadow-sm)'
+          background: scrolled
+            ? 'linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 100%)'
+            : 'var(--white)',
+          borderBottom: scrolled ? 'none' : '1px solid var(--soft-gray)',
+          boxShadow: scrolled ? 'var(--shadow-lg)' : 'var(--shadow-sm)'
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,9 +50,15 @@ export default function TaykaNavbar() {
               className="flex items-center group"
             >
               <div
-                className="font-nunito font-semibold text-3xl tracking-tight transition-colors duration-300"
+                className="font-nunito font-semibold text-3xl tracking-tight transition-all duration-300"
                 style={{
-                  color: 'var(--primary-dark)',
+                  color: scrolled ? 'var(--white)' : 'var(--primary-dark)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = scrolled ? 'var(--warm-sand)' : 'var(--secondary-blue)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--primary-dark)';
                 }}
               >
                 Tayka
@@ -54,18 +71,20 @@ export default function TaykaNavbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="font-inter font-medium text-base transition-all duration-300 relative group"
+                  className="font-inter font-medium text-base transition-all duration-300 relative group px-3 py-2 rounded-md"
                   style={{
-                    color: 'var(--text-primary)',
+                    color: scrolled ? 'var(--white)' : 'var(--text-primary)',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = scrolled ? 'rgba(255, 255, 255, 0.15)' : 'var(--warm-sand)';
+                    e.currentTarget.style.color = scrolled ? 'var(--warm-sand)' : 'var(--primary-dark)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--text-primary)';
                   }}
                 >
                   {item.label}
-                  <span
-                    className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
-                    style={{
-                      background: 'var(--secondary-blue)',
-                    }}
-                  />
                 </Link>
               ))}
 
@@ -76,14 +95,30 @@ export default function TaykaNavbar() {
                 onMouseLeave={() => setShowAgeDropdown(false)}
               >
                 <button
-                  className="font-inter font-medium text-base transition-all duration-300 flex items-center gap-1"
+                  className="font-inter font-medium text-base transition-all duration-300 flex items-center gap-1 px-3 py-2 rounded-md"
                   style={{
-                    color: 'var(--text-primary)',
+                    color: scrolled ? 'var(--white)' : 'var(--text-primary)',
+                    background: showAgeDropdown
+                      ? (scrolled ? 'rgba(255, 255, 255, 0.15)' : 'var(--warm-sand)')
+                      : 'transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!showAgeDropdown) {
+                      e.currentTarget.style.background = scrolled ? 'rgba(255, 255, 255, 0.15)' : 'var(--warm-sand)';
+                      e.currentTarget.style.color = scrolled ? 'var(--warm-sand)' : 'var(--primary-dark)';
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!showAgeDropdown) {
+                      e.currentTarget.style.background = 'transparent';
+                      e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--text-primary)';
+                    }
                   }}
                 >
                   Por Edad
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-300 ${showAgeDropdown ? 'rotate-180' : ''}`}
+                    style={{ color: showAgeDropdown && !scrolled ? 'var(--primary-dark)' : 'inherit' }}
                   />
                 </button>
 
@@ -108,10 +143,12 @@ export default function TaykaNavbar() {
                           borderColor: 'var(--soft-gray)',
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'var(--off-white)';
+                          e.currentTarget.style.background = 'var(--warm-sand)';
+                          e.currentTarget.style.color = 'var(--primary-dark)';
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.background = 'transparent';
+                          e.currentTarget.style.color = 'var(--text-primary)';
                         }}
                       >
                         <div className="font-inter font-medium text-sm">
@@ -133,15 +170,23 @@ export default function TaykaNavbar() {
             </div>
 
             {/* Right Actions - Icons Only */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               {/* Search */}
               <Link
                 href="/search"
-                className="p-2 transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 rounded-md"
                 aria-label="Buscar talleres"
                 style={{
-                  color: 'var(--text-primary)',
+                  color: scrolled ? 'var(--white)' : 'var(--text-primary)',
                   borderRadius: 'var(--radius-md)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = scrolled ? 'rgba(255, 255, 255, 0.2)' : 'var(--sage-green)';
+                  e.currentTarget.style.transform = 'scale(1.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
                 <Search className="h-5 w-5" />
@@ -150,18 +195,28 @@ export default function TaykaNavbar() {
               {/* Account */}
               <Link
                 href="/account"
-                className="p-2 transition-all duration-300 hover:scale-110"
+                className="p-2 transition-all duration-300 rounded-md"
                 aria-label="Mi cuenta"
                 style={{
-                  color: 'var(--text-primary)',
+                  color: scrolled ? 'var(--white)' : 'var(--text-primary)',
                   borderRadius: 'var(--radius-md)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = scrolled ? 'rgba(255, 255, 255, 0.2)' : 'var(--secondary-blue)';
+                  e.currentTarget.style.color = 'var(--white)';
+                  e.currentTarget.style.transform = 'scale(1.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--text-primary)';
+                  e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
                 <User className="h-5 w-5" />
               </Link>
 
               {/* Cart */}
-              <div className="[&_svg]:h-5 [&_svg]:w-5" style={{ color: 'var(--text-primary)' }}>
+              <div className="[&_svg]:h-5 [&_svg]:w-5" style={{ color: scrolled ? 'var(--white)' : 'var(--text-primary)' }}>
                 <Suspense fallback={null}>
                   <CartModal />
                 </Suspense>
