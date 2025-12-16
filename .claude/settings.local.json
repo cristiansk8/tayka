@@ -8,7 +8,14 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nfix: remove unused imports to resolve ESLint warnings\n\n- Remove unused ''useEffect'' import from TaykaNavbar.tsx\n- Remove unused ''ShoppingCart'' icon import from TaykaNavbar.tsx\n- Remove unused setters from useState declarations (setHearts, setStars)\n- Remove unused ''getMenuQuery'' import from lib/shopify/index.ts\n- Remove unused ''ShopifyMenuOperation'' type import\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git commit:*)",
       "Bash(npm install)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node --version:*)",
+      "Bash(npm:*)",
+      "Bash(timeout 15 npm run dev:*)",
+      "Bash(cat:*)",
+      "Bash(git restore:*)",
+      "Bash(DEBUG=*)"
     ]
   }
 }
