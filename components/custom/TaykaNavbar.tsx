@@ -20,14 +20,14 @@ export default function TaykaNavbar() {
 
   // Professional navigation - adult focused
   const navItems = [
-    { href: '/', label: 'Inicio' },
-    { href: '/search', label: 'Talleres' },
+    { href: '/', label: 'Home' },
+    { href: '/search', label: 'Workshops' },
   ];
 
   const ageCategories = [
-    { href: '/search/0-3-años', label: '0-3 años', description: 'Estimulación temprana' },
-    { href: '/search/3-6-años', label: '3-6 años', description: 'Preescolar' },
-    { href: '/search/6-mas-años', label: '6+ años', description: 'Escolar' },
+    { href: '/search/0-3-años', label: '0-3 years', description: 'Early stimulation' },
+    { href: '/search/3-6-años', label: '3-6 years', description: 'Preschool' },
+    { href: '/search/6-mas-años', label: '6+ years', description: 'School age' },
   ];
 
   return (
@@ -59,7 +59,7 @@ export default function TaykaNavbar() {
               >
                 <Image
                   src="/logo-taika.png"
-                  alt="Tayka - Talleres PDF para el Desarrollo Infantil"
+                  alt="Tayka - PDF Workshops for Child Development"
                   fill
                   className="object-contain transition-all duration-500"
                   style={{
@@ -96,7 +96,7 @@ export default function TaykaNavbar() {
                 </Link>
               ))}
 
-              {/* Dropdown - Por Edad */}
+              {/* Dropdown - By Age */}
               <div
                 className="relative"
                 onMouseEnter={() => setShowAgeDropdown(true)}
@@ -123,7 +123,7 @@ export default function TaykaNavbar() {
                     }
                   }}
                 >
-                  Por Edad
+                  By Age
                   <ChevronDown
                     className={`w-4 h-4 transition-transform duration-300 ${showAgeDropdown ? 'rotate-180' : ''}`}
                     style={{ color: showAgeDropdown && !scrolled ? 'var(--primary-dark)' : 'inherit' }}
@@ -267,7 +267,7 @@ export default function TaykaNavbar() {
                     borderRadius: 'var(--radius-md)',
                   }}
                 >
-                  Por Edad
+                  By Age
                   <ChevronDown className={`w-3 h-3 transition-transform ${showAgeDropdown ? 'rotate-180' : ''}`} />
                 </button>
 

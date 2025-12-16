@@ -37,11 +37,11 @@ export default function Footer() {
                 opacity: 0.85,
               }}
             >
-              Talleres PDF profesionales para el desarrollo infantil
+              Professional PDF workshops for child development
             </p>
           </div>
 
-          {/* Links Rápidos */}
+          {/* Quick Links */}
           <div>
             <h4
               className="font-inter font-semibold text-sm mb-4"
@@ -51,14 +51,14 @@ export default function Footer() {
                 textTransform: 'uppercase',
               }}
             >
-              Talleres
+              Workshops
             </h4>
             <ul className="space-y-2">
               {[
-                { href: '/search/0-3-años', label: '0-3 años' },
-                { href: '/search/3-6-años', label: '3-6 años' },
-                { href: '/search/6-mas-años', label: '6+ años' },
-                { href: '/search', label: 'Ver todos' },
+                { href: '/search/0-3-años', label: '0-3 years' },
+                { href: '/search/3-6-años', label: '3-6 years' },
+                { href: '/search/6-mas-años', label: '6+ years' },
+                { href: '/search', label: 'View all' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -100,9 +100,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { href: '/terminos-del-servicio', label: 'Términos' },
-                { href: '/politica-proteccion-datos', label: 'Privacidad' },
-                { href: '/politica-reembolso', label: 'Reembolsos' },
+                { href: '/terminos-del-servicio', label: 'Terms' },
+                { href: '/politica-proteccion-datos', label: 'Privacy' },
+                { href: '/politica-reembolso', label: 'Refunds' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -168,7 +168,7 @@ export default function Footer() {
               opacity: 0.7,
             }}
           >
-            © {new Date().getFullYear()} Tayka · Talleres PDF para el Desarrollo Infantil · Colombia
+            © {new Date().getFullYear()} Tayka · PDF Workshops for Child Development
           </p>
         </div>
       </div>
