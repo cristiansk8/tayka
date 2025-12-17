@@ -15,44 +15,88 @@ export const metadata = {
   }
 };
 
-// Componente Hero Principal con Emojis Grandes
+// Hero Banner with Background Image - Editorial Minimalism
 function TaykaHero() {
   return (
-    <section className="tayka-bg-play min-h-[60vh] flex items-center justify-center px-6 py-16 fade-in-up">
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Emoji Grande */}
-        <div className="text-[120px] mb-6 gentle-pulse">
-          👋
-        </div>
-
-        {/* Big and Clear Title */}
-        <h1
-          className="text-5xl md:text-6xl font-bold mb-6"
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/profesor-de-vista-frontal-explicando-los-ninos.jpg"
+          alt="Teacher explaining to children"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Gradient Overlay for Text Readability */}
+        <div
+          className="absolute inset-0"
           style={{
-            color: 'var(--tayka-text-dark)',
-            letterSpacing: '0.5px',
-            lineHeight: '1.2'
+            background: 'linear-gradient(135deg, rgba(31, 42, 68, 0.85) 0%, rgba(74, 111, 165, 0.75) 50%, rgba(31, 42, 68, 0.85) 100%)'
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto text-center px-6 py-20">
+        {/* Main Heading */}
+        <h1
+          className="font-inter text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up"
+          style={{
+            color: 'var(--white)',
+            letterSpacing: '-0.5px',
+            lineHeight: '1.1',
+            textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)'
           }}
         >
-          Welcome to Tayka!
+          Professional PDF Workshops
         </h1>
 
-        {/* Simple Description */}
+        {/* Subtitle */}
         <p
-          className="text-2xl md:text-3xl mb-8 font-semibold"
+          className="font-source text-2xl md:text-3xl mb-4 font-medium"
           style={{
-            color: 'var(--tayka-text-medium)',
-            lineHeight: '1.6'
+            color: 'var(--warm-sand)',
+            lineHeight: '1.5',
+            textShadow: '0 1px 3px rgba(0, 0, 0, 0.4)'
           }}
         >
-          A special place where you can explore and choose amazing things 🌟
+          For Child Development & Early Education
         </p>
 
-        {/* Big Button */}
-        <button className="tayka-btn tayka-btn-primary text-xl px-8 py-6">
-          <span className="text-3xl">🎨</span>
-          <span>Start Exploring!</span>
-        </button>
+        <p
+          className="font-source text-lg md:text-xl mb-10 max-w-3xl mx-auto"
+          style={{
+            color: 'var(--off-white)',
+            lineHeight: '1.6',
+            opacity: 0.95,
+            textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)'
+          }}
+        >
+          Expertly designed downloadable resources for educators, parents, and therapists
+        </p>
+
+        {/* CTA Button */}
+        <Link
+          href="/search"
+          className="inline-block font-inter text-lg font-semibold px-10 py-5 transition-all duration-300 hover:scale-105 active:scale-95"
+          style={{
+            background: 'linear-gradient(135deg, var(--warm-sand) 0%, #D4C4A8 100%)',
+            color: 'var(--primary-dark)',
+            borderRadius: 'var(--radius-lg)',
+            boxShadow: '0 4px 12px rgba(230, 213, 184, 0.4)',
+            letterSpacing: '0.3px'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.boxShadow = '0 6px 20px rgba(230, 213, 184, 0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(230, 213, 184, 0.4)';
+          }}
+        >
+          Browse Workshops →
+        </Link>
       </div>
     </section>
   );
