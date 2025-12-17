@@ -5,8 +5,9 @@ import { join } from 'path';
 
 export const contentType = 'image/png';
 
-export default async function Image({ params }: { params: { page: string } }) {
+export default async function Image(props: { params: Promise<{ page: string }> }) {
   try {
+    const params = await props.params;
     const page = await getPage(params.page);
     const title = page?.seo?.title || page?.title || '';
     const fontBuffer = await readFile(join(process.cwd(), 'public', 'Moderat Font', 'Moderat-Bold.ttf'));
