@@ -4,10 +4,9 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import CartModal from 'components/cart/modal';
 import { Suspense } from 'react';
-import { Search, User, ChevronDown } from 'lucide-react';
+import { Search, User } from 'lucide-react';
 
 export default function TaykaNavbar() {
-  const [showAgeDropdown, setShowAgeDropdown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,12 +21,6 @@ export default function TaykaNavbar() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/search', label: 'Workshops' },
-  ];
-
-  const ageCategories = [
-    { href: '/search/0-3-años', label: '0-3 years', description: 'Early stimulation' },
-    { href: '/search/3-6-años', label: '3-6 years', description: 'Preschool' },
-    { href: '/search/6-mas-años', label: '6+ years', description: 'School age' },
   ];
 
   return (
@@ -95,86 +88,6 @@ export default function TaykaNavbar() {
                   {item.label}
                 </Link>
               ))}
-
-              {/* Dropdown - By Age */}
-              <div
-                className="relative"
-                onMouseEnter={() => setShowAgeDropdown(true)}
-                onMouseLeave={() => setShowAgeDropdown(false)}
-              >
-                <button
-                  className="font-inter font-medium text-base transition-all duration-300 flex items-center gap-1 px-3 py-2 rounded-md"
-                  style={{
-                    color: scrolled ? 'var(--white)' : 'var(--text-primary)',
-                    background: showAgeDropdown
-                      ? (scrolled ? 'rgba(255, 255, 255, 0.15)' : 'var(--warm-sand)')
-                      : 'transparent'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!showAgeDropdown) {
-                      e.currentTarget.style.background = scrolled ? 'rgba(255, 255, 255, 0.15)' : 'var(--warm-sand)';
-                      e.currentTarget.style.color = scrolled ? 'var(--warm-sand)' : 'var(--primary-dark)';
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!showAgeDropdown) {
-                      e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = scrolled ? 'var(--white)' : 'var(--text-primary)';
-                    }
-                  }}
-                >
-                  By Age
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-300 ${showAgeDropdown ? 'rotate-180' : ''}`}
-                    style={{ color: showAgeDropdown && !scrolled ? 'var(--primary-dark)' : 'inherit' }}
-                  />
-                </button>
-
-                {/* Dropdown Menu */}
-                {showAgeDropdown && (
-                  <div
-                    className="absolute top-full left-0 mt-2 w-56 overflow-hidden animate-slideDownFade"
-                    style={{
-                      background: 'var(--white)',
-                      border: '1px solid var(--soft-gray)',
-                      borderRadius: 'var(--radius-md)',
-                      boxShadow: 'var(--shadow-md)',
-                    }}
-                  >
-                    {ageCategories.map((category) => (
-                      <Link
-                        key={category.href}
-                        href={category.href}
-                        className="block px-4 py-3 transition-colors duration-200 border-b last:border-b-0"
-                        style={{
-                          color: 'var(--text-primary)',
-                          borderColor: 'var(--soft-gray)',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'var(--warm-sand)';
-                          e.currentTarget.style.color = 'var(--primary-dark)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'transparent';
-                          e.currentTarget.style.color = 'var(--text-primary)';
-                        }}
-                      >
-                        <div className="font-inter font-medium text-sm">
-                          {category.label}
-                        </div>
-                        <div
-                          className="font-source text-xs mt-1"
-                          style={{
-                            color: 'var(--text-secondary)',
-                          }}
-                        >
-                          {category.description}
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
             </div>
 
             {/* Right Actions - Icons Only */}
@@ -255,49 +168,6 @@ export default function TaykaNavbar() {
                   {item.label}
                 </Link>
               ))}
-
-              {/* Mobile Dropdown for Age */}
-              <div className="relative">
-                <button
-                  onClick={() => setShowAgeDropdown(!showAgeDropdown)}
-                  className="font-inter font-medium text-sm px-4 py-2 transition-colors duration-300 flex items-center gap-1"
-                  style={{
-                    color: 'var(--text-primary)',
-                    background: showAgeDropdown ? 'var(--off-white)' : 'transparent',
-                    borderRadius: 'var(--radius-md)',
-                  }}
-                >
-                  By Age
-                  <ChevronDown className={`w-3 h-3 transition-transform ${showAgeDropdown ? 'rotate-180' : ''}`} />
-                </button>
-
-                {showAgeDropdown && (
-                  <div
-                    className="absolute top-full right-0 mt-2 w-48 overflow-hidden z-50"
-                    style={{
-                      background: 'var(--white)',
-                      border: '1px solid var(--soft-gray)',
-                      borderRadius: 'var(--radius-md)',
-                      boxShadow: 'var(--shadow-md)',
-                    }}
-                  >
-                    {ageCategories.map((category) => (
-                      <Link
-                        key={category.href}
-                        href={category.href}
-                        className="block px-4 py-2 font-inter text-sm border-b last:border-b-0"
-                        style={{
-                          color: 'var(--text-primary)',
-                          borderColor: 'var(--soft-gray)',
-                        }}
-                        onClick={() => setShowAgeDropdown(false)}
-                      >
-                        {category.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
             </div>
           </div>
         </div>
