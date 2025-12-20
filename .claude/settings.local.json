@@ -15,7 +15,8 @@
       "Bash(timeout 15 npm run dev:*)",
       "Bash(cat:*)",
       "Bash(git restore:*)",
-      "Bash(DEBUG=*)"
+      "Bash(DEBUG=*)",
+      "Bash(NODE_OPTIONS='--trace-warnings' npm run build:*)"
     ]
   }
 }
