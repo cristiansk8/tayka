@@ -32,6 +32,20 @@ export default function CalmZone() {
     return () => clearInterval(breathingCycle);
   }, [isOpen]);
 
+  // Close modal with ESC key
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, [isOpen]);
+
   const getBreathingText = () => {
     switch(breathingPhase) {
       case 'inhale': return '🌬️ Breathe in gently';
@@ -64,13 +78,20 @@ export default function CalmZone() {
 
       {/* Calm zone modal */}
       {isOpen && (
-        <div className="calm-modal">
-          <div className="calm-content">
+        <div
+          className="calm-modal"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="calm-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Close button */}
             <button
               className="close-calm-btn"
               onClick={() => setIsOpen(false)}
-              aria-label="Close calm zone"
+              aria-label="Close calm zone (ESC or click outside)"
+              title="Close (ESC or click outside)"
             >
               ✕
             </button>
@@ -202,6 +223,7 @@ export default function CalmZone() {
           justify-content: center;
           padding: 24px;
           animation: fade-in 600ms ease;
+          cursor: pointer;
         }
         @keyframes fade-in {
           from { opacity: 0; }
@@ -211,26 +233,37 @@ export default function CalmZone() {
           max-width: 600px;
           width: 100%;
           position: relative;
+          cursor: default;
         }
         /* Botón cerrar */
         .close-calm-btn {
           position: absolute;
-          top: 0;
-          right: 0;
-          width: 48px;
-          height: 48px;
+          top: -8px;
+          right: -8px;
+          width: 56px;
+          height: 56px;
           border-radius: 50%;
-          border: none;
-          background: rgba(255, 255, 255, 0.9);
-          font-size: 24px;
+          border: 3px solid rgba(156, 39, 176, 0.2);
+          background: rgba(255, 255, 255, 0.95);
+          font-size: 28px;
+          font-weight: 700;
+          color: #6A1B9A;
           cursor: pointer;
           transition: all 300ms ease;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
           z-index: 10;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
         .close-calm-btn:hover {
-          transform: scale(1.1) rotate(90deg);
+          transform: scale(1.15) rotate(90deg);
           background: white;
+          border-color: #9C27B0;
+          box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
+        }
+        .close-calm-btn:active {
+          transform: scale(1.05) rotate(90deg);
         }
         /* Header */
         .calm-header {
