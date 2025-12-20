@@ -63,6 +63,15 @@ export const metadata = {
     follow: true,
     index: true
   }
+  ,
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/logo-tayka1.png',
+    other: [
+      { rel: 'icon', url: '/favicon.svg' },
+      { rel: 'apple-touch-icon', url: '/logo-tayka1.png' }
+    ]
+  }
 };
 
 export const viewport = {
@@ -89,6 +98,9 @@ export default async function RootLayout({
             })(window,document,'script','dataLayer','GTM-WKH2FLX6');
           `}
         </Script>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/logo-tayka1.png" />
+        <link rel="apple-touch-icon" href="/logo-tayka1.png" />
       </head>
       <body className="bg-neutral-50 text-black selection:bg-teal-300">
         <noscript>
