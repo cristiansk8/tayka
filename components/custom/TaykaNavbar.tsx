@@ -51,7 +51,7 @@ export default function TaykaNavbar() {
                 }}
               >
                 <Image
-                  src="/logo-taika.png"
+                  src="/logo-tayka1.png"
                   alt="Tayka - PDF Workshops for Child Development"
                   fill
                   className="object-contain transition-all duration-500"

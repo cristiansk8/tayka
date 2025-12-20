@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="relative mb-4" style={{ width: '280px', height: '96px' }}>
               <Image
-                src="/logo-taika.png"
+                src="/logo-tayka1.png"
                 alt="Tayka"
                 fill
                 className="object-contain"
