@@ -8,17 +8,17 @@ export default function CTAButton() {
       href="/search"
       className="inline-block font-inter text-lg font-semibold px-10 py-5 transition-all duration-300 hover:scale-105 active:scale-95"
       style={{
-        background: 'linear-gradient(135deg, var(--warm-sand) 0%, #D4C4A8 100%)',
-        color: 'var(--primary-dark)',
+        background: 'linear-gradient(135deg, #4A6FA5 0%, #8FAAD1 100%)',
+        color: 'white',
         borderRadius: 'var(--radius-lg)',
-        boxShadow: '0 4px 12px rgba(230, 213, 184, 0.4)',
+        boxShadow: '0 4px 12px rgba(74, 111, 165, 0.4)',
         letterSpacing: '0.3px'
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = '0 6px 20px rgba(230, 213, 184, 0.6)';
+        e.currentTarget.style.boxShadow = '0 6px 20px rgba(74, 111, 165, 0.6)';
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = '0 4px 12px rgba(230, 213, 184, 0.4)';
+        e.currentTarget.style.boxShadow = '0 4px 12px rgba(74, 111, 165, 0.4)';
       }}
     >
       Browse Workshops →

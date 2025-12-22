@@ -407,23 +407,23 @@ button {
 }
 
 .tayka-btn-primary {
-  background: linear-gradient(135deg, var(--tayka-blue), #5DADE2);
+  background: linear-gradient(135deg, #4A6FA5, #8FAAD1);
   color: white;
 }
 
 .tayka-btn-success {
-  background: linear-gradient(135deg, var(--tayka-green), #66BB6A);
-  color: #1B5E20;
+  background: linear-gradient(135deg, #E6D6C9, #F5EFEA);
+  color: #4A6FA5;
 }
 
 .tayka-btn-warning {
-  background: linear-gradient(135deg, var(--tayka-yellow), #FFB74D);
-  color: #E65100;
+  background: linear-gradient(135deg, #F2C6CC, #E8B7BF);
+  color: #4A6FA5;
 }
 
 /* Focus states para accesibilidad */
 .tayka-focus:focus {
-  outline: 3px solid var(--tayka-blue);
+  outline: 3px solid #4A6FA5;
   outline-offset: 4px;
   border-radius: 8px;
 }
@@ -441,25 +441,25 @@ button {
   animation: celebrate 800ms ease-in-out;
 }
 
-/* Gradientes de Fondo */
+/* Gradientes de Fondo - Child-Friendly Pastels */
 .tayka-bg-learn {
-  background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 50%, #90CAF9 100%);
+  background: linear-gradient(135deg, #F5EFEA 0%, #E6D6C9 50%, #8FAAD1 100%);
 }
 
 .tayka-bg-play {
-  background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 50%, #FFF176 100%);
+  background: linear-gradient(135deg, #8FAAD1 0%, #4A6FA5 50%, #8FAAD1 100%);
 }
 
 .tayka-bg-create {
-  background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 50%, #F48FB1 100%);
+  background: linear-gradient(135deg, #F2C6CC 0%, #E8B7BF 50%, #F2C6CC 100%);
 }
 
 .tayka-bg-calm {
-  background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 50%, #CE93D8 100%);
+  background: linear-gradient(135deg, #F5EFEA 0%, #E8B7BF 50%, #F2C6CC 100%);
 }
 
 .tayka-bg-achievement {
-  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 50%, #A5D6A7 100%);
+  background: linear-gradient(135deg, #E6D6C9 0%, #F5EFEA 50%, #8FAAD1 100%);
 }
 
 /* === Navbar Estilo Videojuego === */

@@ -93,26 +93,26 @@ function CategoryCards() {
     {
       emoji: '🎮',
       title: 'Games',
-      color: 'var(--tayka-blue)',
-      gradient: 'linear-gradient(135deg, #E3F2FD, #BBDEFB)'
+      color: '#4A6FA5',
+      gradient: 'linear-gradient(135deg, #8FAAD1, #4A6FA5)'
     },
     {
       emoji: '📚',
       title: 'Learning',
-      color: 'var(--tayka-green)',
-      gradient: 'linear-gradient(135deg, #E8F5E9, #C8E6C9)'
+      color: '#4A6FA5',
+      gradient: 'linear-gradient(135deg, #F5EFEA, #E6D6C9)'
     },
     {
       emoji: '🎨',
       title: 'Creativity',
-      color: 'var(--tayka-coral)',
-      gradient: 'linear-gradient(135deg, #FCE4EC, #F8BBD0)'
+      color: '#E8B7BF',
+      gradient: 'linear-gradient(135deg, #F2C6CC, #E8B7BF)'
     },
     {
       emoji: '🌙',
       title: 'Calm',
-      color: 'var(--tayka-purple)',
-      gradient: 'linear-gradient(135deg, #F3E5F5, #E1BEE7)'
+      color: '#8FAAD1',
+      gradient: 'linear-gradient(135deg, #E8B7BF, #F2C6CC)'
     }
   ];
 

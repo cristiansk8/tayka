@@ -143,10 +143,10 @@ export default function CalmZone() {
                 <span className="activity-emoji">🎨</span>
                 <p className="activity-text">Calm colors</p>
                 <div className="color-orbs">
-                  <div className="color-orb" style={{ background: '#E1BEE7' }} />
-                  <div className="color-orb" style={{ background: '#B2DFDB' }} />
-                  <div className="color-orb" style={{ background: '#C5E1A5' }} />
-                  <div className="color-orb" style={{ background: '#FFF9C4' }} />
+                  <div className="color-orb" style={{ background: '#F2C6CC' }} />
+                  <div className="color-orb" style={{ background: '#E8B7BF' }} />
+                  <div className="color-orb" style={{ background: '#8FAAD1' }} />
+                  <div className="color-orb" style={{ background: '#F5EFEA' }} />
                 </div>
               </div>
 
@@ -185,9 +185,9 @@ export default function CalmZone() {
           height: 64px;
           border-radius: 50%;
           border: none;
-          background: linear-gradient(135deg, #E1BEE7, #CE93D8);
+          background: linear-gradient(135deg, #E8B7BF, #F2C6CC);
           cursor: pointer;
-          box-shadow: 0 8px 24px rgba(206, 147, 216, 0.4);
+          box-shadow: 0 8px 24px rgba(232, 183, 191, 0.4);
           transition: all 400ms ease;
           z-index: 999;
           display: flex;
@@ -196,7 +196,7 @@ export default function CalmZone() {
         }
         .calm-zone-button:hover {
           transform: scale(1.15);
-          box-shadow: 0 12px 32px rgba(206, 147, 216, 0.5);
+          box-shadow: 0 12px 32px rgba(232, 183, 191, 0.5);
         }
         .calm-emoji {
           font-size: 36px;
@@ -216,7 +216,7 @@ export default function CalmZone() {
         .calm-modal {
           position: fixed;
           inset: 0;
-          background: linear-gradient(135deg, #E8EAF6, #F3E5F5, #E1BEE7);
+          background: linear-gradient(135deg, #F5EFEA, #F2C6CC, #E8B7BF);
           z-index: 10000;
           display: flex;
           align-items: center;
@@ -243,11 +243,11 @@ export default function CalmZone() {
           width: 56px;
           height: 56px;
           border-radius: 50%;
-          border: 3px solid rgba(156, 39, 176, 0.2);
+          border: 3px solid rgba(74, 111, 165, 0.2);
           background: rgba(255, 255, 255, 0.95);
           font-size: 28px;
           font-weight: 700;
-          color: #6A1B9A;
+          color: #4A6FA5;
           cursor: pointer;
           transition: all 300ms ease;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -259,8 +259,8 @@ export default function CalmZone() {
         .close-calm-btn:hover {
           transform: scale(1.15) rotate(90deg);
           background: white;
-          border-color: #9C27B0;
-          box-shadow: 0 6px 20px rgba(156, 39, 176, 0.3);
+          border-color: #4A6FA5;
+          box-shadow: 0 6px 20px rgba(74, 111, 165, 0.3);
         }
         .close-calm-btn:active {
           transform: scale(1.05) rotate(90deg);
@@ -274,7 +274,7 @@ export default function CalmZone() {
           font-family: 'Fredoka', 'Nunito', sans-serif;
           font-size: 40px;
           font-weight: 700;
-          color: #4A148C;
+          color: #4A6FA5;
           margin: 0 0 12px 0;
           display: flex;
           align-items: center;
@@ -291,7 +291,7 @@ export default function CalmZone() {
         }
         .calm-subtitle {
           font-size: 18px;
-          color: #6A1B9A;
+          color: #4A6FA5;
           margin: 0;
           font-weight: 600;
         }
@@ -340,7 +340,7 @@ export default function CalmZone() {
           font-family: 'Fredoka', sans-serif;
           font-size: 24px;
           font-weight: 700;
-          color: #4A148C;
+          color: #4A6FA5;
           margin: 0;
         }
         /* Actividades */
@@ -367,7 +367,7 @@ export default function CalmZone() {
           font-family: 'Nunito', sans-serif;
           font-size: 16px;
           font-weight: 700;
-          color: #4A148C;
+          color: #4A6FA5;
           margin: 0 0 16px 0;
         }
         /* Estrellas flotantes */
@@ -422,12 +422,12 @@ export default function CalmZone() {
           font-weight: 700;
           cursor: pointer;
           transition: all 300ms ease;
-          background: #E0E0E0;
-          color: #5A6C7D;
+          background: #E6D6C9;
+          color: #4A6FA5;
         }
         .sound-toggle.active {
-          background: linear-gradient(135deg, #B2DFDB, #80CBC4);
-          color: #004D40;
+          background: linear-gradient(135deg, #8FAAD1, #4A6FA5);
+          color: white;
         }
         .sound-toggle:hover {
           transform: scale(1.05);
@@ -444,7 +444,7 @@ export default function CalmZone() {
           font-family: 'Nunito', sans-serif;
           font-size: 18px;
           font-weight: 600;
-          color: #4A148C;
+          color: #4A6FA5;
           margin: 0;
           line-height: 1.6;
         }

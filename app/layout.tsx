@@ -75,7 +75,7 @@ export const metadata = {
 };
 
 export const viewport = {
-  themeColor: '#1F2A44' // Primary dark blue - Editorial Minimalism
+  themeColor: '#4A6FA5' // Contrast blue - Child-friendly pastels
 };
 
 export default async function RootLayout({
