@@ -2,8 +2,8 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Términos y Condiciones | Juan Becerra',
-  description: 'Lee los términos y condiciones de uso de la tienda online Juan Becerra.'
+  title: 'Términos y Condiciones | Tayka',
+  description: 'Lee los términos y condiciones de uso de la tienda online Tayka.'
 };
 
 export default function TerminosYCondiciones() {
@@ -21,7 +21,7 @@ export default function TerminosYCondiciones() {
 
         <div className="text-gray-600">
           <p className="mb-6">
-            Bienvenido a JUAN BECERRA. Al acceder y utilizar este sitio web y nuestros servicios, aceptas cumplir y estar sujeto a los siguientes términos y condiciones. Por favor, léelos detenidamente.
+            Bienvenido a TAYKA. Al acceder y utilizar este sitio web y nuestros servicios, aceptas cumplir y estar sujeto a los siguientes términos y condiciones. Por favor, léelos detenidamente.
           </p>
 
           <section className="mb-8">
@@ -29,7 +29,7 @@ export default function TerminosYCondiciones() {
               1. ACEPTACIÓN DE TÉRMINOS
             </h2>
             <p className="mb-4">
-              Al acceder a www.juanbecerra.co y realizar una compra, aceptas estar obligado por estos Términos y Condiciones, todas las leyes y regulaciones aplicables de Colombia, y aceptas que eres responsable del cumplimiento de cualquier ley local aplicable.
+              Al acceder a www.tayka.co y realizar una compra, aceptas estar obligado por estos Términos y Condiciones, todas las leyes y regulaciones aplicables de Colombia, y aceptas que eres responsable del cumplimiento de cualquier ley local aplicable.
             </p>
             <p className="mb-4">
               Si no estás de acuerdo con alguno de estos términos, te prohibimos usar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por las leyes de derechos de autor y marcas registradas aplicables.
@@ -41,7 +41,7 @@ export default function TerminosYCondiciones() {
               2. USO DEL SITIO WEB
             </h2>
             <p className="mb-4">
-              Se te concede permiso para descargar temporalmente una copia de los materiales en el sitio web de JUAN BECERRA solo para visualización transitoria personal y no comercial. Esto es el otorgamiento de una licencia, no una transferencia de título, y bajo esta licencia no puedes:
+              Se te concede permiso para descargar temporalmente una copia de los materiales en el sitio web de TAYKA solo para visualización transitoria personal y no comercial. Esto es el otorgamiento de una licencia, no una transferencia de título, y bajo esta licencia no puedes:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Modificar o copiar los materiales</li>
@@ -118,7 +118,7 @@ export default function TerminosYCondiciones() {
               Los envíos se realizan únicamente dentro del territorio colombiano. Los tiempos de entrega son estimados y comienzan a contarse desde la confirmación del pago y despacho del producto.
             </p>
             <p className="mb-4">
-              JUAN BECERRA no se hace responsable por retrasos causados por la empresa de mensajería, condiciones climáticas, festivos, o situaciones de fuerza mayor.
+              TAYKA no se hace responsable por retrasos causados por la empresa de mensajería, condiciones climáticas, festivos, o situaciones de fuerza mayor.
             </p>
             <p className="mb-4">
               Para más información, consulta nuestra <a href="/politica-envios" className="text-blue-600 hover:underline">Política de Envíos</a>.
@@ -175,7 +175,7 @@ export default function TerminosYCondiciones() {
               <li>Marcas y nombres comerciales</li>
             </ul>
             <p className="mb-4">
-              Son propiedad exclusiva de JUAN BECERRA y están protegidos por las leyes de propiedad intelectual de Colombia. Cualquier uso no autorizado constituirá una violación de estas leyes.
+              Son propiedad exclusiva de TAYKA y están protegidos por las leyes de propiedad intelectual de Colombia. Cualquier uso no autorizado constituirá una violación de estas leyes.
             </p>
           </section>
 
@@ -193,7 +193,7 @@ export default function TerminosYCondiciones() {
               11. LIMITACIÓN DE RESPONSABILIDAD
             </h2>
             <p className="mb-4">
-              En ningún caso JUAN BECERRA será responsable por:
+              En ningún caso TAYKA será responsable por:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Daños directos, indirectos, incidentales o consecuentes</li>
@@ -208,7 +208,7 @@ export default function TerminosYCondiciones() {
               12. ENLACES A TERCEROS
             </h2>
             <p className="mb-4">
-              Nuestro sitio puede contener enlaces a sitios web de terceros. JUAN BECERRA no tiene control sobre estos sitios y no asume responsabilidad por su contenido, políticas de privacidad o prácticas.
+              Nuestro sitio puede contener enlaces a sitios web de terceros. TAYKA no tiene control sobre estos sitios y no asume responsabilidad por su contenido, políticas de privacidad o prácticas.
             </p>
           </section>
 
@@ -217,7 +217,7 @@ export default function TerminosYCondiciones() {
               13. MODIFICACIONES
             </h2>
             <p className="mb-4">
-              JUAN BECERRA se reserva el derecho de:
+              TAYKA se reserva el derecho de:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Modificar estos Términos y Condiciones en cualquier momento</li>
@@ -234,7 +234,7 @@ export default function TerminosYCondiciones() {
               14. CANCELACIÓN DE PEDIDOS
             </h2>
             <p className="mb-4">
-              JUAN BECERRA se reserva el derecho de rechazar o cancelar pedidos por las siguientes razones:
+              TAYKA se reserva el derecho de rechazar o cancelar pedidos por las siguientes razones:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li>Producto no disponible</li>
@@ -262,9 +262,9 @@ export default function TerminosYCondiciones() {
               Si tienes preguntas sobre estos Términos y Condiciones, puedes contactarnos:
             </p>
             <ul className="list-none mb-4 space-y-2">
-              <li><strong>Email:</strong> juanbecerracolombia@gmail.com</li>
-              <li><strong>WhatsApp:</strong> +57 317 272 7916</li>
-              <li><strong>Sitio web:</strong> www.juanbecerra.co</li>
+              <li><strong>Email:</strong> contacto@tayka.co</li>
+              <li><strong>WhatsApp:</strong> [Número de contacto]</li>
+              <li><strong>Sitio web:</strong> www.tayka.co</li>
               <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</li>
             </ul>
           </section>
