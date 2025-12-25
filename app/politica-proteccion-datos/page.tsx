@@ -2,8 +2,8 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Política de Protección de Datos | Tayka',
-  description: 'Conoce cómo protegemos tus datos personales en Tayka. Política de privacidad y tratamiento de datos para recursos didácticos especializados.'
+  title: 'Privacy Policy | Tayka',
+  description: 'Learn how we protect your personal data at Tayka. Privacy policy and data processing for specialized educational resources.'
 };
 
 export default function PoliticaProteccionDatos() {
@@ -11,192 +11,192 @@ export default function PoliticaProteccionDatos() {
     <>
      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
-          Política de Protección de Datos Personales
+          Privacy Policy
         </h1>
 
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Última actualización: {new Date().toLocaleDateString()}
+          Last updated: {new Date().toLocaleDateString()}
         </p>
 
         <div className="text-gray-600">
           <p className="mb-6">
-            TAYKA - Expertos en recursos didácticos para niños autistas, en cumplimiento de la Ley 1581 de 2012 y el Decreto 1377 de 2013, ha establecido esta Política de Tratamiento de Datos Personales para informar a nuestros clientes y usuarios sobre el manejo de su información personal.
+            TAYKA - Experts in educational resources for autistic children, in compliance with Law 1581 of 2012 and Decree 1377 of 2013, has established this Personal Data Processing Policy to inform our customers and users about how we handle their personal information.
           </p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              RESPONSABLE DEL TRATAMIENTO
+              DATA CONTROLLER
             </h2>
             <p className="mb-4">
-              <strong>Razón Social:</strong> TAYKA - Recursos Didácticos Especializados
+              <strong>Company Name:</strong> TAYKA - Specialized Educational Resources
             </p>
             <p className="mb-4">
-              <strong>Domicilio:</strong> Colombia
+              <strong>Address:</strong> Colombia
             </p>
             <p className="mb-4">
-              <strong>Correo electrónico:</strong> contacto@tayka.co
+              <strong>Email:</strong> contacto@tayka.co
             </p>
             <p className="mb-4">
-              <strong>Teléfono:</strong> [Número de contacto]
+              <strong>Phone:</strong> [Contact Number]
             </p>
             <p className="mb-4">
-              <strong>Sitio web:</strong> www.tayka.co
+              <strong>Website:</strong> www.tayka.co
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              DATOS PERSONALES QUE RECOPILAMOS
+              PERSONAL DATA WE COLLECT
             </h2>
             <p className="mb-4">
-              TAYKA puede recopilar los siguientes tipos de información personal:
+              TAYKA may collect the following types of personal information:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Datos de identificación:</strong> Nombre completo, número de identificación</li>
-              <li><strong>Datos de contacto:</strong> Dirección de correo electrónico, número de teléfono</li>
-              <li><strong>Datos de facturación:</strong> Información de pago para recursos didácticos digitales</li>
-              <li><strong>Datos de navegación:</strong> Dirección IP, tipo de navegador, páginas visitadas, tiempo de permanencia</li>
-              <li><strong>Preferencias educativas:</strong> Historial de compras de recursos, talleres de interés, edad del niño</li>
+              <li><strong>Identification data:</strong> Full name, identification number</li>
+              <li><strong>Contact data:</strong> Email address, phone number</li>
+              <li><strong>Billing data:</strong> Payment information for digital educational resources</li>
+              <li><strong>Navigation data:</strong> IP address, browser type, pages visited, time spent</li>
+              <li><strong>Educational preferences:</strong> Resource purchase history, workshops of interest, child's age</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              FINALIDADES DEL TRATAMIENTO
+              PURPOSE OF DATA PROCESSING
             </h2>
             <p className="mb-4">
-              Los datos personales recopilados serán utilizados para las siguientes finalidades:
+              The personal data collected will be used for the following purposes:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Procesar y gestionar compras de recursos didácticos digitales (PDFs)</li>
-              <li>Facilitar el proceso de pago y facturación</li>
-              <li>Enviar recursos digitales adquiridos por correo electrónico</li>
-              <li>Brindar atención al cliente y soporte especializado</li>
-              <li>Enviar comunicaciones sobre el estado de compras y acceso a materiales</li>
-              <li>Enviar información educativa, nuevos talleres y recursos (previo consentimiento)</li>
-              <li>Realizar análisis para mejorar nuestros materiales didácticos</li>
-              <li>Mejorar nuestros recursos, servicios y experiencia de usuario</li>
-              <li>Cumplir con obligaciones legales y fiscales</li>
-              <li>Prevenir fraudes y garantizar la seguridad de la plataforma</li>
+              <li>Process and manage purchases of digital educational resources (PDFs)</li>
+              <li>Facilitate payment and billing processes</li>
+              <li>Send purchased digital resources via email</li>
+              <li>Provide customer service and specialized support</li>
+              <li>Send communications about purchase status and access to materials</li>
+              <li>Send educational information, new workshops and resources (with prior consent)</li>
+              <li>Conduct analysis to improve our educational materials</li>
+              <li>Improve our resources, services and user experience</li>
+              <li>Comply with legal and fiscal obligations</li>
+              <li>Prevent fraud and ensure platform security</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              DERECHOS DE LOS TITULARES
+              DATA SUBJECT RIGHTS
             </h2>
             <p className="mb-4">
-              Como titular de datos personales, usted tiene derecho a:
+              As a personal data subject, you have the right to:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Conocer, actualizar y rectificar</strong> sus datos personales</li>
-              <li><strong>Solicitar prueba</strong> de la autorización otorgada para el tratamiento</li>
-              <li><strong>Ser informado</strong> sobre el uso que se ha dado a sus datos</li>
-              <li><strong>Presentar quejas</strong> ante la Superintendencia de Industria y Comercio</li>
-              <li><strong>Revocar la autorización</strong> y solicitar la supresión de datos (cuando sea procedente)</li>
-              <li><strong>Acceder gratuitamente</strong> a sus datos personales</li>
+              <li><strong>Know, update and rectify</strong> your personal data</li>
+              <li><strong>Request proof</strong> of the authorization granted for processing</li>
+              <li><strong>Be informed</strong> about the use of your data</li>
+              <li><strong>File complaints</strong> with the Superintendence of Industry and Commerce</li>
+              <li><strong>Revoke authorization</strong> and request data deletion (when applicable)</li>
+              <li><strong>Access your personal data</strong> free of charge</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              PROCEDIMIENTO PARA EJERCER SUS DERECHOS
+              PROCEDURE TO EXERCISE YOUR RIGHTS
             </h2>
             <p className="mb-4">
-              Para ejercer sus derechos sobre datos personales, puede contactarnos a través de:
+              To exercise your rights regarding personal data, you can contact us through:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Correo electrónico: contacto@tayka.co</li>
-              <li>WhatsApp: [Número de contacto]</li>
+              <li>Email: contacto@tayka.co</li>
+              <li>WhatsApp: [Contact Number]</li>
             </ul>
             <p className="mb-4">
-              Su solicitud será atendida en un plazo máximo de quince (15) días hábiles contados a partir de la fecha de recepción. Si la solicitud no puede ser atendida en ese plazo, se le informará el motivo de la demora y la fecha en que será atendida, que no podrá superar los ocho (8) días hábiles siguientes al vencimiento del primer término.
+              Your request will be addressed within a maximum period of fifteen (15) business days from the date of receipt. If the request cannot be addressed within that period, you will be informed of the reason for the delay and the date it will be addressed, which may not exceed eight (8) business days following the expiration of the first term.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              SEGURIDAD DE LA INFORMACIÓN
+              INFORMATION SECURITY
             </h2>
             <p className="mb-4">
-              TAYKA implementa medidas técnicas, humanas y administrativas para proteger la información personal contra pérdida, robo, acceso no autorizado, divulgación, copia, uso o modificación.
+              TAYKA implements technical, human and administrative measures to protect personal information against loss, theft, unauthorized access, disclosure, copying, use or modification.
             </p>
             <p className="mb-4">
-              Nuestra plataforma utiliza protocolos de seguridad como SSL/TLS para cifrar la información transmitida entre su navegador y nuestros servidores. Los datos de pago son procesados a través de plataformas seguras que cumplen con los estándares PCI DSS.
+              Our platform uses security protocols such as SSL/TLS to encrypt information transmitted between your browser and our servers. Payment data is processed through secure platforms that comply with PCI DSS standards.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              TRANSFERENCIA Y TRANSMISIÓN DE DATOS
+              DATA TRANSFER AND TRANSMISSION
             </h2>
             <p className="mb-4">
-              TAYKA podrá transferir o transmitir datos personales a terceros cuando:
+              TAYKA may transfer or transmit personal data to third parties when:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Sea necesario para entregar recursos digitales por correo electrónico</li>
-              <li>Se requiera para procesar pagos (ej: plataformas de pago como Shopify Payments, Mercado Pago)</li>
-              <li>Exista obligación legal de hacerlo</li>
-              <li>Se haya obtenido autorización expresa del titular</li>
+              <li>Necessary to deliver digital resources via email</li>
+              <li>Required to process payments (e.g., payment platforms like Shopify Payments, Mercado Pago)</li>
+              <li>There is a legal obligation to do so</li>
+              <li>Express authorization has been obtained from the data subject</li>
             </ul>
             <p className="mb-4">
-              En todos los casos, nos aseguramos de que los terceros mantengan estándares de seguridad y confidencialidad adecuados.
+              In all cases, we ensure that third parties maintain adequate security and confidentiality standards.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              TIEMPO DE CONSERVACIÓN
+              RETENTION PERIOD
             </h2>
             <p className="mb-4">
-              Los datos personales serán conservados durante el tiempo que sea necesario para cumplir con las finalidades establecidas y para atender requerimientos legales, fiscales o contables. Una vez cumplidas estas finalidades y obligaciones, los datos serán eliminados de nuestros sistemas de forma segura.
+              Personal data will be retained for as long as necessary to fulfill the established purposes and to attend to legal, fiscal or accounting requirements. Once these purposes and obligations are fulfilled, the data will be securely deleted from our systems.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              COOKIES Y TECNOLOGÍAS SIMILARES
+              COOKIES AND SIMILAR TECHNOLOGIES
             </h2>
             <p className="mb-4">
-              Nuestro sitio web utiliza cookies y tecnologías similares para mejorar la experiencia del usuario, recordar preferencias y recopilar información sobre el uso del sitio. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio.
+              Our website uses cookies and similar technologies to improve user experience, remember preferences and collect information about site usage. You can configure your browser to reject cookies, although this may affect some site functionalities.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              MENORES DE EDAD
+              MINORS
             </h2>
             <p className="mb-4">
-              Los servicios de TAYKA están dirigidos a padres, tutores y profesionales que trabajan con niños. Aunque nuestros recursos están diseñados para niños, la compra y gestión de cuenta debe ser realizada por adultos responsables. No recopilamos intencionalmente información personal de menores de edad sin el consentimiento de padres o tutores.
+              TAYKA's services are directed to parents, guardians and professionals who work with children. Although our resources are designed for children, account purchase and management must be performed by responsible adults. We do not intentionally collect personal information from minors without parental or guardian consent.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              MODIFICACIONES A LA POLÍTICA
+              POLICY MODIFICATIONS
             </h2>
             <p className="mb-4">
-              TAYKA se reserva el derecho de modificar esta Política de Protección de Datos en cualquier momento. Los cambios significativos serán comunicados a través de nuestra página web o por correo electrónico. Se recomienda revisar periódicamente esta política para estar informado sobre cómo protegemos su información.
+              TAYKA reserves the right to modify this Privacy Policy at any time. Significant changes will be communicated through our website or by email. We recommend reviewing this policy periodically to stay informed about how we protect your information.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              CONTACTO
+              CONTACT
             </h2>
             <p className="mb-4">
-              Para cualquier consulta, duda o solicitud relacionada con el tratamiento de sus datos personales, puede contactarnos:
+              For any questions, doubts or requests related to the processing of your personal data, you can contact us:
             </p>
             <ul className="list-none mb-4 space-y-2">
               <li><strong>Email:</strong> contacto@tayka.co</li>
-              <li><strong>WhatsApp:</strong> [Número de contacto]</li>
-              <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM (Hora de Colombia)</li>
+              <li><strong>WhatsApp:</strong> [Contact Number]</li>
+              <li><strong>Office hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM (Colombia Time)</li>
             </ul>
           </section>
 
           <p className="mt-8 text-sm italic">
-            Al utilizar nuestros servicios y proporcionar su información personal, usted acepta los términos de esta Política de Protección de Datos Personales.
+            By using our services and providing your personal information, you accept the terms of this Privacy Policy.
           </p>
         </div>
       </div>
