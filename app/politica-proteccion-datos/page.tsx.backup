@@ -1,0 +1,207 @@
+import React from 'react';
+import FooterCustom from '@/components/custom/FooterCustom';
+
+export const metadata = {
+  title: 'Privacy Policy | Tayka',
+  description: 'Learn how we protect your personal data at Tayka. Privacy policy and data processing for specialized educational resources.'
+};
+
+export default function PoliticaProteccionDatos() {
+  return (
+    <>
+     <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <h1 className="text-4xl font-bold mb-8 text-gray-900">
+          Privacy Policy
+        </h1>
+
+      <div className="prose prose-lg max-w-none">
+        <p className="text-lg text-gray-600 mb-6">
+          Last updated: {new Date().toLocaleDateString()}
+        </p>
+
+        <div className="text-gray-600">
+          <p className="mb-6">
+            TAYKA - Experts in educational resources for autistic children, in compliance with Law 1581 of 2012 and Decree 1377 of 2013, has established this Personal Data Processing Policy to inform our customers and users about how we handle their personal information.
+          </p>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              DATA CONTROLLER
+            </h2>
+            <p className="mb-4">
+              <strong>Company Name:</strong> TAYKA - Specialized Educational Resources
+            </p>
+            <p className="mb-4">
+              <strong>Address:</strong> Colombia
+            </p>
+            <p className="mb-4">
+              <strong>Email:</strong> contacto@tayka.co
+            </p>
+            <p className="mb-4">
+              <strong>Phone:</strong> [Contact Number]
+            </p>
+            <p className="mb-4">
+              <strong>Website:</strong> www.tayka.co
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              PERSONAL DATA WE COLLECT
+            </h2>
+            <p className="mb-4">
+              TAYKA may collect the following types of personal information:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Identification data:</strong> Full name, identification number</li>
+              <li><strong>Contact data:</strong> Email address, phone number</li>
+              <li><strong>Billing data:</strong> Payment information for digital educational resources</li>
+              <li><strong>Navigation data:</strong> IP address, browser type, pages visited, time spent</li>
+              <li><strong>Educational preferences:</strong> Resource purchase history, workshops of interest, child's age</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              PURPOSE OF DATA PROCESSING
+            </h2>
+            <p className="mb-4">
+              The personal data collected will be used for the following purposes:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Process and manage purchases of digital educational resources (PDFs)</li>
+              <li>Facilitate payment and billing processes</li>
+              <li>Send purchased digital resources via email</li>
+              <li>Provide customer service and specialized support</li>
+              <li>Send communications about purchase status and access to materials</li>
+              <li>Send educational information, new workshops and resources (with prior consent)</li>
+              <li>Conduct analysis to improve our educational materials</li>
+              <li>Improve our resources, services and user experience</li>
+              <li>Comply with legal and fiscal obligations</li>
+              <li>Prevent fraud and ensure platform security</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              DERECHOS DE LOS TITULARES
+            </h2>
+            <p className="mb-4">
+              Como titular de datos personales, usted tiene derecho a:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Conocer, actualizar y rectificar</strong> sus datos personales</li>
+              <li><strong>Solicitar prueba</strong> de la autorización otorgada para el tratamiento</li>
+              <li><strong>Ser informado</strong> sobre el uso que se ha dado a sus datos</li>
+              <li><strong>Presentar quejas</strong> ante la Superintendencia de Industria y Comercio</li>
+              <li><strong>Revocar la autorización</strong> y solicitar la supresión de datos (cuando sea procedente)</li>
+              <li><strong>Acceder gratuitamente</strong> a sus datos personales</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              PROCEDIMIENTO PARA EJERCER SUS DERECHOS
+            </h2>
+            <p className="mb-4">
+              Para ejercer sus derechos sobre datos personales, puede contactarnos a través de:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Correo electrónico: contacto@tayka.co</li>
+              <li>WhatsApp: [Número de contacto]</li>
+            </ul>
+            <p className="mb-4">
+              Su solicitud será atendida en un plazo máximo de quince (15) días hábiles contados a partir de la fecha de recepción. Si la solicitud no puede ser atendida en ese plazo, se le informará el motivo de la demora y la fecha en que será atendida, que no podrá superar los ocho (8) días hábiles siguientes al vencimiento del primer término.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              SEGURIDAD DE LA INFORMACIÓN
+            </h2>
+            <p className="mb-4">
+              TAYKA implementa medidas técnicas, humanas y administrativas para proteger la información personal contra pérdida, robo, acceso no autorizado, divulgación, copia, uso o modificación.
+            </p>
+            <p className="mb-4">
+              Nuestra plataforma utiliza protocolos de seguridad como SSL/TLS para cifrar la información transmitida entre su navegador y nuestros servidores. Los datos de pago son procesados a través de plataformas seguras que cumplen con los estándares PCI DSS.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              TRANSFERENCIA Y TRANSMISIÓN DE DATOS
+            </h2>
+            <p className="mb-4">
+              TAYKA podrá transferir o transmitir datos personales a terceros cuando:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Sea necesario para entregar recursos digitales por correo electrónico</li>
+              <li>Se requiera para procesar pagos (ej: plataformas de pago como Shopify Payments, Mercado Pago)</li>
+              <li>Exista obligación legal de hacerlo</li>
+              <li>Se haya obtenido autorización expresa del titular</li>
+            </ul>
+            <p className="mb-4">
+              En todos los casos, nos aseguramos de que los terceros mantengan estándares de seguridad y confidencialidad adecuados.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              TIEMPO DE CONSERVACIÓN
+            </h2>
+            <p className="mb-4">
+              Los datos personales serán conservados durante el tiempo que sea necesario para cumplir con las finalidades establecidas y para atender requerimientos legales, fiscales o contables. Una vez cumplidas estas finalidades y obligaciones, los datos serán eliminados de nuestros sistemas de forma segura.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              COOKIES Y TECNOLOGÍAS SIMILARES
+            </h2>
+            <p className="mb-4">
+              Nuestro sitio web utiliza cookies y tecnologías similares para mejorar la experiencia del usuario, recordar preferencias y recopilar información sobre el uso del sitio. Puede configurar su navegador para rechazar cookies, aunque esto puede afectar algunas funcionalidades del sitio.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              MENORES DE EDAD
+            </h2>
+            <p className="mb-4">
+              Los servicios de TAYKA están dirigidos a padres, tutores y profesionales que trabajan con niños. Aunque nuestros recursos están diseñados para niños, la compra y gestión de cuenta debe ser realizada por adultos responsables. No recopilamos intencionalmente información personal de menores de edad sin el consentimiento de padres o tutores.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              MODIFICACIONES A LA POLÍTICA
+            </h2>
+            <p className="mb-4">
+              TAYKA se reserva el derecho de modificar esta Política de Protección de Datos en cualquier momento. Los cambios significativos serán comunicados a través de nuestra página web o por correo electrónico. Se recomienda revisar periódicamente esta política para estar informado sobre cómo protegemos su información.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              CONTACTO
+            </h2>
+            <p className="mb-4">
+              Para cualquier consulta, duda o solicitud relacionada con el tratamiento de sus datos personales, puede contactarnos:
+            </p>
+            <ul className="list-none mb-4 space-y-2">
+              <li><strong>Email:</strong> contacto@tayka.co</li>
+              <li><strong>WhatsApp:</strong> [Número de contacto]</li>
+              <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM (Hora de Colombia)</li>
+            </ul>
+          </section>
+
+          <p className="mt-8 text-sm italic">
+            Al utilizar nuestros servicios y proporcionar su información personal, usted acepta los términos de esta Política de Protección de Datos Personales.
+          </p>
+        </div>
+      </div>
+    </main>
+      <FooterCustom />
+    </>
+  );
+}
