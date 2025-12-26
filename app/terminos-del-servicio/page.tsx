@@ -17,7 +17,7 @@ export default function TerminosDelServicio() {
       {/* Contenedor principal con estilos para el contenido */}
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Última actualización: {new Date().toLocaleDateString()}
+          Last updated: {new Date().toLocaleDateString()}
         </p>
 
         <div className="text-gray-600">

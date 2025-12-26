@@ -2,7 +2,7 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Política de Envíos | Tayka',
+  title: 'Shipping Policy | Tayka',
   description: 'Conoce nuestra política de envíos, tiempos de entrega y cobertura en Colombia.'
 };
 
@@ -11,12 +11,12 @@ export default function PoliticaEnvios() {
     <>
      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
-          Política de Envíos
+          Shipping Policy
         </h1>
 
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Última actualización: {new Date().toLocaleDateString()}
+          Last updated: {new Date().toLocaleDateString()}
         </p>
 
         <div className="text-gray-600">

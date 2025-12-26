@@ -2,8 +2,8 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Términos y Condiciones | Tayka',
-  description: 'Lee los términos y condiciones de uso de la tienda online Tayka.'
+  title: 'Terms and Conditions | Tayka',
+  description: 'Read the terms and conditions for using Tayka online store.'
 };
 
 export default function TerminosYCondiciones() {
@@ -11,12 +11,12 @@ export default function TerminosYCondiciones() {
     <>
      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
-          Términos y Condiciones
+          Terms and Conditions
         </h1>
 
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-gray-600 mb-6">
-          Última actualización: {new Date().toLocaleDateString()}
+          Last updated: {new Date().toLocaleDateString()}
         </p>
 
         <div className="text-gray-600">
@@ -29,7 +29,7 @@ export default function TerminosYCondiciones() {
               1. ACEPTACIÓN DE TÉRMINOS
             </h2>
             <p className="mb-4">
-              Al acceder a www.tayka.co y realizar una compra, aceptas estar obligado por estos Términos y Condiciones, todas las leyes y regulaciones aplicables de Colombia, y aceptas que eres responsable del cumplimiento de cualquier ley local aplicable.
+              Al acceder a www.tayka.co y realizar una compra, aceptas estar obligado por estos Terms and Conditions, todas las leyes y regulaciones aplicables de Colombia, y aceptas que eres responsable del cumplimiento de cualquier ley local aplicable.
             </p>
             <p className="mb-4">
               Si no estás de acuerdo con alguno de estos términos, te prohibimos usar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por las leyes de derechos de autor y marcas registradas aplicables.
@@ -220,7 +220,7 @@ export default function TerminosYCondiciones() {
               TAYKA se reserva el derecho de:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Modificar estos Términos y Condiciones en cualquier momento</li>
+              <li>Modificar estos Terms and Conditions en cualquier momento</li>
               <li>Cambiar, suspender o descontinuar cualquier aspecto del sitio web</li>
               <li>Modificar o descontinuar productos y servicios</li>
             </ul>
@@ -250,7 +250,7 @@ export default function TerminosYCondiciones() {
               15. JURISDICCIÓN Y LEY APLICABLE
             </h2>
             <p className="mb-4">
-              Estos Términos y Condiciones se rigen por las leyes de la República de Colombia. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de Colombia.
+              Estos Terms and Conditions se rigen por las leyes de la República de Colombia. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de Colombia.
             </p>
           </section>
 
@@ -259,7 +259,7 @@ export default function TerminosYCondiciones() {
               16. CONTACTO
             </h2>
             <p className="mb-4">
-              Si tienes preguntas sobre estos Términos y Condiciones, puedes contactarnos:
+              Si tienes preguntas sobre estos Terms and Conditions, puedes contactarnos:
             </p>
             <ul className="list-none mb-4 space-y-2">
               <li><strong>Email:</strong> contacto@tayka.co</li>
@@ -270,7 +270,7 @@ export default function TerminosYCondiciones() {
           </section>
 
           <p className="mt-8 text-sm italic">
-            Al utilizar nuestro sitio web y realizar una compra, reconoces que has leído, entendido y aceptado estar obligado por estos Términos y Condiciones.
+            Al utilizar nuestro sitio web y realizar una compra, reconoces que has leído, entendido y aceptado estar obligado por estos Terms and Conditions.
           </p>
         </div>
       </div>
