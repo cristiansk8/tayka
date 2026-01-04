@@ -65,10 +65,10 @@ export const metadata = {
   }
   ,
   icons: {
-    icon: '/favicon.svg',
+    icon: '/logo-tayka1.png',
     apple: '/logo-tayka1.png',
     other: [
-      { rel: 'icon', url: '/favicon.svg' },
+      { rel: 'icon', type: 'image/png', url: '/logo-tayka1.png' },
       { rel: 'apple-touch-icon', url: '/logo-tayka1.png' }
     ]
   }
@@ -98,8 +98,7 @@ export default async function RootLayout({
             })(window,document,'script','dataLayer','GTM-WKH2FLX6');
           `}
         </Script>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/logo-tayka1.png" />
+        <link rel="icon" type="image/png" href="/logo-tayka1.png" />
         <link rel="apple-touch-icon" href="/logo-tayka1.png" />
       </head>
       <body className="bg-neutral-50 text-black selection:bg-teal-300">
