@@ -2,8 +2,8 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Shipping Policy | Tayka',
-  description: 'Conoce nuestra política de envíos, tiempos de entrega y cobertura en Colombia.'
+  title: 'Digital Delivery Policy | Tayka',
+  description: 'Learn how we deliver digital educational resources instantly after purchase at Tayka.'
 };
 
 export default function PoliticaEnvios() {
@@ -11,7 +11,7 @@ export default function PoliticaEnvios() {
     <>
      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
-          Shipping Policy
+          Digital Delivery Policy
         </h1>
 
       <div className="prose prose-lg max-w-none">
@@ -21,216 +21,214 @@ export default function PoliticaEnvios() {
 
         <div className="text-gray-600">
           <p className="mb-6">
-            En TAYKA nos comprometemos a entregar tus productos de manera segura y oportuna. Esta política describe nuestros tiempos de procesamiento, costos de envío y cobertura.
+            At TAYKA we specialize in digital educational resources (PDF workshops). This policy describes how we deliver your purchased materials instantly and securely.
           </p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              COBERTURA
+              INSTANT DIGITAL DELIVERY
             </h2>
             <p className="mb-4">
-              Actualmente realizamos envíos a todo el territorio nacional colombiano. No realizamos envíos internacionales en este momento.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              TIEMPO DE PROCESAMIENTO
-            </h2>
-            <p className="mb-4">
-              Una vez confirmado tu pedido y verificado el pago, el proceso de preparación y despacho toma:
+              All TAYKA educational resources are delivered digitally via email. There are no physical products to ship, which means:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Productos en stock:</strong> 1 a 2 días hábiles</li>
-              <li><strong>Productos bajo pedido:</strong> 5 a 7 días hábiles</li>
-              <li><strong>Temporada alta (Black Friday, Navidad):</strong> 3 a 5 días hábiles</li>
-            </ul>
-            <p className="mb-4">
-              El tiempo de procesamiento no incluye el tiempo de envío. Recibirás una notificación por correo electrónico cuando tu pedido sea despachado, junto con el número de seguimiento.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              TIEMPOS DE ENTREGA
-            </h2>
-            <p className="mb-4">
-              Los tiempos de entrega varían según la ciudad de destino:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Bogotá:</strong> 2 a 4 días hábiles</li>
-              <li><strong>Ciudades principales</strong> (Medellín, Cali, Barranquilla, Cartagena): 3 a 5 días hábiles</li>
-              <li><strong>Otras ciudades y municipios:</strong> 5 a 8 días hábiles</li>
-              <li><strong>Zonas rurales:</strong> 8 a 12 días hábiles</li>
-            </ul>
-            <p className="mb-4">
-              Los días hábiles son de lunes a viernes, excluyendo festivos nacionales y días no laborables.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              COSTOS DE ENVÍO
-            </h2>
-            <p className="mb-4">
-              Los costos de envío son calculados automáticamente al momento de finalizar tu compra, basándose en:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Ubicación de entrega (ciudad y departamento)</li>
-              <li>Peso y dimensiones del paquete</li>
-              <li>Valor total del pedido</li>
-            </ul>
-            <p className="mb-4 bg-green-50 border-l-4 border-green-500 p-4">
-              <strong>Envío Gratis:</strong> Todos los pedidos superiores a $150.000 COP califican para envío gratuito a nivel nacional.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              TRANSPORTADORA
-            </h2>
-            <p className="mb-4">
-              Trabajamos con empresas de mensajería certificadas y confiables que garantizan la seguridad de tu envío. Dependiendo de la ubicación, utilizamos:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Servientrega</li>
-              <li>Coordinadora</li>
-              <li>TCC (Transportes Especiales)</li>
-              <li>Interrapidísimo</li>
+              <li><strong>Instant access:</strong> Receive your materials within minutes of purchase</li>
+              <li><strong>No shipping costs:</strong> Digital delivery is always free</li>
+              <li><strong>No waiting time:</strong> Start using your resources immediately</li>
+              <li><strong>Eco-friendly:</strong> Zero carbon footprint from shipping</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              SEGUIMIENTO DE ENVÍO
+              HOW IT WORKS
             </h2>
             <p className="mb-4">
-              Una vez tu pedido sea despachado, recibirás:
+              Our digital delivery process is simple and automatic:
+            </p>
+            <ol className="list-decimal pl-6 mb-4 space-y-3">
+              <li><strong>Complete your purchase:</strong> Select your PDF workshops and complete the payment process</li>
+              <li><strong>Payment confirmation:</strong> Once payment is verified (usually within 1-2 minutes), our system automatically processes your order</li>
+              <li><strong>Email delivery:</strong> You receive an email with:
+                <ul className="list-disc pl-6 mt-2 space-y-1">
+                  <li>Purchase confirmation and receipt</li>
+                  <li>Direct download links for each purchased resource</li>
+                  <li>Instructions for accessing your account dashboard</li>
+                </ul>
+              </li>
+              <li><strong>Account access:</strong> Log into your TAYKA account to view all your purchased materials anytime</li>
+            </ol>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              DELIVERY TIMEFRAME
+            </h2>
+            <p className="mb-4">
+              Digital products are delivered according to the following timeline:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Correo electrónico con número de guía de seguimiento</li>
-              <li>Enlace directo para rastrear tu pedido en tiempo real</li>
-              <li>Notificaciones por WhatsApp sobre el estado de tu envío (opcional)</li>
+              <li><strong>Credit/Debit Card payments:</strong> Instant to 2 minutes</li>
+              <li><strong>PSE (Online Bank Transfer):</strong> 2-5 minutes after bank confirmation</li>
+              <li><strong>Cash payments (Mercado Pago):</strong> Within 10 minutes after payment confirmation</li>
             </ul>
-            <p className="mb-4">
-              Puedes rastrear tu envío ingresando el número de guía en el sitio web de la transportadora correspondiente.
+            <p className="mb-4 bg-blue-50 border-l-4 border-blue-500 p-4">
+              <strong>Note:</strong> If you don't receive your download email within 15 minutes, please check your spam/junk folder or contact our support team.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              RECEPCIÓN DEL PEDIDO
+              DOWNLOAD INSTRUCTIONS
             </h2>
             <p className="mb-4">
-              Al recibir tu pedido:
+              To download your purchased PDF workshops:
             </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Verifica que el paquete esté en buenas condiciones antes de firmar</li>
-              <li>Si observas daños externos, repórtalo inmediatamente al mensajero</li>
-              <li>Abre el paquete y verifica que el contenido coincida con tu pedido</li>
-              <li>Si hay algún problema, contacta nuestro servicio al cliente dentro de las 24 horas siguientes</li>
-            </ul>
+            <ol className="list-decimal pl-6 mb-4 space-y-2">
+              <li>Open the confirmation email from TAYKA</li>
+              <li>Click on the download link for each product</li>
+              <li>The PDF will download to your device</li>
+              <li>Save the file to a location you'll remember</li>
+              <li>Open with any PDF reader (Adobe Reader, Preview, etc.)</li>
+            </ol>
             <p className="mb-4">
-              <strong>Importante:</strong> La firma de recepción indica conformidad con el estado del paquete. Reclamos posteriores sobre daños en el empaque externo no serán aceptados.
+              <strong>Alternative method:</strong> Log into your account at www.tayka.co, go to "My Purchases" and download any resource at any time.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              INTENTOS DE ENTREGA
+              UNLIMITED RE-DOWNLOADS
             </h2>
             <p className="mb-4">
-              La transportadora realizará hasta 3 intentos de entrega:
+              Your purchased materials are always available:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li><strong>Primer intento:</strong> En la dirección registrada</li>
-              <li><strong>Segundo intento:</strong> Se dejará aviso de visita</li>
-              <li><strong>Tercer intento:</strong> Se contactará telefónicamente</li>
-            </ul>
-            <p className="mb-4">
-              Si después de 3 intentos no es posible realizar la entrega, el paquete será devuelto a nuestras instalaciones. Los costos de reenvío correrán por cuenta del cliente.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              DIRECCIÓN DE ENTREGA
-            </h2>
-            <p className="mb-4">
-              Es responsabilidad del cliente proporcionar una dirección completa y correcta que incluya:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Dirección completa (calle, número, apartamento, barrio)</li>
-              <li>Ciudad y departamento</li>
-              <li>Puntos de referencia (si es necesario)</li>
-              <li>Número de teléfono de contacto actualizado</li>
-              <li>Nombre completo de quien recibirá el pedido</li>
-            </ul>
-            <p className="mb-4">
-              TAYKA no se hace responsable por entregas fallidas debido a información incorrecta o incompleta proporcionada por el cliente.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              MODIFICACIÓN DE DIRECCIÓN
-            </h2>
-            <p className="mb-4">
-              Si necesitas cambiar la dirección de envío:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Contacta inmediatamente a servicio al cliente</li>
-              <li>La modificación solo es posible antes del despacho</li>
-              <li>Una vez despachado, debe coordinarse directamente con la transportadora</li>
-              <li>Cambios de dirección con la transportadora pueden generar costos adicionales</li>
+              <li>Download links never expire</li>
+              <li>Re-download from your account anytime</li>
+              <li>No limit on number of downloads</li>
+              <li>Access from any device with your account credentials</li>
+              <li>Lost your files? Simply download them again from your account</li>
             </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              PAQUETES PERDIDOS O DAÑADOS
+              SUPPORTED DEVICES
             </h2>
             <p className="mb-4">
-              En el caso poco probable de que tu paquete se pierda o llegue dañado:
+              Our PDF workshops work on all major platforms:
             </p>
             <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Contacta inmediatamente a nuestro servicio al cliente con fotos del daño</li>
-              <li>Proporcionaremos solución dentro de 24-48 horas</li>
-              <li>Opciones de solución: reemplazo del producto o reembolso completo</li>
-              <li>Todos nuestros envíos están asegurados</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              DEMORAS EN LA ENTREGA
-            </h2>
-            <p className="mb-4">
-              Los tiempos de entrega estimados pueden verse afectados por:
-            </p>
-            <ul className="list-disc pl-6 mb-4 space-y-2">
-              <li>Condiciones climáticas adversas</li>
-              <li>Festividades y temporadas altas</li>
-              <li>Situaciones de orden público</li>
-              <li>Problemas logísticos de la transportadora</li>
-              <li>Restricciones o cierres por emergencias</li>
+              <li><strong>Desktop:</strong> Windows, Mac, Linux</li>
+              <li><strong>Mobile:</strong> iPhone, iPad, Android phones and tablets</li>
+              <li><strong>E-readers:</strong> Most tablets and e-readers that support PDF files</li>
             </ul>
             <p className="mb-4">
-              En caso de demoras significativas, te mantendremos informado sobre el estado de tu envío.
+              <strong>Requirements:</strong> A PDF reader application (most devices have one pre-installed)
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              CONTACTO
+              PRINTING YOUR MATERIALS
             </h2>
             <p className="mb-4">
-              Para consultas sobre tu envío o problemas con la entrega:
+              All TAYKA PDF workshops can be printed for personal use:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Print at home on any standard printer</li>
+              <li>Print at a professional print shop</li>
+              <li>Print individual pages or entire workshops</li>
+              <li>Color or black & white printing (color recommended for best experience)</li>
+            </ul>
+            <p className="mb-4">
+              <strong>Note:</strong> Printed materials are for personal use only and may not be distributed or sold.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              DELIVERY ISSUES
+            </h2>
+            <p className="mb-4">
+              If you experience any issues with digital delivery:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Email not received:</strong> Check spam/junk folders, verify email address in account settings</li>
+              <li><strong>Download link not working:</strong> Try a different browser or device, log into your account directly</li>
+              <li><strong>File won't open:</strong> Ensure you have a PDF reader installed, try downloading again</li>
+              <li><strong>Payment processed but no email:</strong> Contact support with your order number</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              ACCOUNT ACCESS
+            </h2>
+            <p className="mb-4">
+              Your TAYKA account provides permanent access to all purchases:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>View complete purchase history</li>
+              <li>Download any previous purchase anytime</li>
+              <li>Update email and account information</li>
+              <li>Receive notifications about new resources</li>
+            </ul>
+            <p className="mb-4">
+              <strong>Lost your password?</strong> Use the "Forgot Password" feature on the login page to reset it.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              FILE SECURITY AND BACKUP
+            </h2>
+            <p className="mb-4">
+              We recommend:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Save downloaded files to a secure location on your device</li>
+              <li>Create backup copies on external drives or cloud storage</li>
+              <li>Remember that you can always re-download from your account</li>
+              <li>Keep your account credentials secure</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              TECHNICAL SUPPORT
+            </h2>
+            <p className="mb-4">
+              If you need help with downloading or accessing your digital products:
             </p>
             <ul className="list-none mb-4 space-y-2">
-              <li><strong>WhatsApp:</strong> [Número de contacto]</li>
-              <li><strong>Email:</strong> contacto@tayka.co</li>
-              <li><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</li>
+              <li><strong>Email:</strong> contacto@tayka.co (Response within 24 hours)</li>
+              <li><strong>WhatsApp:</strong> [Contact Number] (Faster response)</li>
+              <li><strong>Office hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM (Colombia Time)</li>
+            </ul>
+            <p className="mb-4">
+              When contacting support, please include:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Your order number</li>
+              <li>Email address used for purchase</li>
+              <li>Description of the issue</li>
+              <li>Screenshots if applicable</li>
+            </ul>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              UPDATES AND IMPROVEMENTS
+            </h2>
+            <p className="mb-4">
+              TAYKA occasionally updates educational resources to improve quality or add content. If we make significant improvements to a product you've purchased:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>You'll receive an email notification</li>
+              <li>Updated version will be available in your account</li>
+              <li>No additional charge for updates to products you own</li>
             </ul>
           </section>
         </div>

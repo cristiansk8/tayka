@@ -2,8 +2,8 @@ import React from 'react';
 import FooterCustom from '@/components/custom/FooterCustom';
 
 export const metadata = {
-  title: 'Términos del servicio | Tayka',
-  description: 'Conoce nuestros términos del servicio y condiciones de uso de la tienda Tayka.'
+  title: 'Terms of Service | Tayka',
+  description: 'Read our terms of service and conditions of use for Tayka digital educational resources.'
 };
 
 export default function TerminosDelServicio() {
@@ -11,10 +11,9 @@ export default function TerminosDelServicio() {
     <>
      <main className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
-          Términos del servicio
+          Terms of Service
         </h1>
 
-      {/* Contenedor principal con estilos para el contenido */}
       <div className="prose prose-lg max-w-none">
         <p className="text-lg text-gray-600 mb-6">
           Last updated: {new Date().toLocaleDateString()}
@@ -22,79 +21,116 @@ export default function TerminosDelServicio() {
 
         <div className="text-gray-600">
           <p className="mb-6">
-            TAYKA, se dedica a la producción y comercialización de ropa exterior y accesorios para hombres y mujeres a través de distintos canales. Estos términos rigen exclusivamente para las compras que se hagan directamente en la tienda online www.tayka.co
+            TAYKA specializes in the production and distribution of digital educational resources (PDF workshops) for autistic children through our online platform. These terms govern exclusively purchases made directly on the online store www.tayka.co
           </p>
 
           <p className="mb-6">
-            Al usar este Sitio, el usuario admite haber leído y entendido estos Términos de Uso y está de acuerdo en sujetarse a los mismos y cumplir con todas las leyes y reglamentos aplicables que hagan parte de la Legislación Colombiana. Además, cuando el usuario utilice cualquier servicio suministrado en este Sitio, estará sujeto a las reglas, guías, políticas, términos y condiciones aplicables.
+            By using this Site, the user acknowledges having read and understood these Terms of Service and agrees to be bound by them and comply with all applicable laws and regulations that are part of Colombian legislation. Additionally, when the user uses any service provided on this Site, they will be subject to the applicable rules, guidelines, policies, terms and conditions.
           </p>
 
           <p className="mb-8">
-            Cualquier persona que ingrese sus datos en el formulario de Registro, deben ser personas capaces según las leyes de la república de Colombia para realizar transacciones comerciales en la tienda online. Los menores de edad podrán navegar en la página web, pero no están habilitados para realizar ningún tipo de transacción.
+            Any person who enters their data in the Registration form must be legally capable according to the laws of the Republic of Colombia to conduct commercial transactions in the online store. Minors may browse the website but are not authorized to make any type of transaction.
           </p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              PROCESO DE COMPRA
+              PURCHASE PROCESS
             </h2>
             <p className="mb-4">
-              Para realizar una compra el usuario o cliente deberá registrarse en la página y autorizar la política de tratamiento de datos personales. Luego de registrarse, este podrá celebrar relaciones de consumo de los productos exhibidos en el portal o plataforma.
+              To make a purchase, the user or customer must register on the website and authorize the personal data processing policy. After registering, they can purchase the digital educational resources displayed on the portal or platform.
             </p>
             <p className="mb-4">
-              En caso de crear una cuenta, ésta permanecerá activa hasta que el usuario la cancele o en su defecto cuando TAYKA considere que se está haciendo mal uso de ella. La plataforma de pagos habilitada es Mercado Pago.
+              If you create an account, it will remain active until the user cancels it or TAYKA determines that it is being misused. The enabled payment platform is Mercado Pago.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              DERECHO DE RETRACTO
+              DIGITAL PRODUCT DELIVERY
             </h2>
             <p className="mb-4">
-              El consumidor podrá hacer uso del derecho de retracto contenido en el estatuto del consumidor. El término máximo para ejercer el derecho de retracto será de cinco (5) días hábiles contados a partir de la entrega.
+              Digital products (PDF workshops) are delivered instantly via email after successful payment confirmation. You will receive:
             </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Purchase confirmation email</li>
+              <li>Download links for your purchased resources</li>
+              <li>Access to your account dashboard with all purchased materials</li>
+            </ul>
             <p className="mb-4">
-              El consumidor deberá devolver el producto a TAYKA por los mismos medios y en las mismas condiciones en que lo recibió. Los costos de transporte y los demás que conlleve la devolución del producto serán cubiertos por el consumidor.
+              Download links are valid indefinitely and can be accessed from your account at any time.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              RECEPCIÓN DE LOS PRODUCTOS
+              RIGHT OF WITHDRAWAL (DIGITAL PRODUCTS)
             </h2>
             <p className="mb-4">
-              El envío de los productos se realizará únicamente dentro del territorio colombiano, a través de correo certificado, en un plazo pactado según el destino elegido, contados a partir del perfeccionamiento del contrato.
+              Due to the nature of digital products, refunds are handled differently than physical goods. Please refer to our <a href="/politica-reembolso" className="text-blue-600 hover:underline">Refund Policy</a> for complete details on circumstances under which refunds are available.
+            </p>
+            <p className="mb-4">
+              Once a digital file has been downloaded or accessed, standard right of withdrawal does not apply as per digital goods legislation.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              PROMOCIONES
+              PROMOTIONS
             </h2>
             <p className="mb-4">
-              Las promociones, su vigencia y disponibilidad serán publicadas en la página y su publicidad será clara. Si alguna de las promociones no indica la fecha de la vigencia ésta se entenderá que durará hasta agotar existencias.
+              Promotions, their validity and availability will be published on the website and their advertising will be clear. If any promotion does not indicate an expiration date, it will be understood to last until supplies are exhausted.
             </p>
             <p className="mb-4">
-              Para los productos en promoción no se aceptan cambios y devoluciones. El derecho de retracto de los productos en promoción aplicará para el valor pagado y no para el valor del transporte.
+              Promotional products are subject to the same terms and conditions as regular-priced items. Discounts are applied to the final purchase price.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              PROPIEDAD INTELECTUAL Y DERECHOS DE AUTOR
+              INTELLECTUAL PROPERTY AND COPYRIGHT
             </h2>
             <p className="mb-4">
-              Todas las marcas, logos, nombres y otros signos distintivos, así como los diseños y demás elementos de propiedad intelectual o industrial insertados y usados en esta página son Propiedad exclusiva de TAYKA.
+              All trademarks, logos, names and other distinctive signs, as well as designs and other elements of intellectual or industrial property inserted and used on this website are the exclusive property of TAYKA.
             </p>
+            <p className="mb-4">
+              <strong>Important:</strong> All digital educational resources (PDF workshops) are protected by copyright. Unauthorized sharing, distribution, or commercial use of purchased materials is strictly prohibited and may result in legal action.
+            </p>
+            <p className="mb-4">
+              Purchased resources are licensed for personal use only. You may:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Use the materials with the children under your care</li>
+              <li>Print the materials for personal use</li>
+              <li>Store digital copies for backup purposes</li>
+            </ul>
+            <p className="mb-4">
+              You may NOT:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>Share, sell, or distribute the files to others</li>
+              <li>Post the materials on public websites or social media</li>
+              <li>Modify the materials and redistribute them</li>
+              <li>Use the materials for commercial purposes</li>
+            </ul>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              QUEJAS Y RECLAMOS
+              COMPLAINTS AND CLAIMS
             </h2>
             <p className="mb-4">
-              TAYKA ha dispuesto diferentes canales de atención para atender las peticiones, quejas y reclamos de sus usuarios de manera exitosa. Puedes comunicarte con nosotros a través de WhatsApp, correo o por medio de nuestro formulario de contacto.
+              TAYKA has made available different service channels to successfully address the requests, complaints and claims of its users. You can contact us through WhatsApp, email or through our contact form.
             </p>
+            <ul className="list-none mb-4 space-y-2">
+              <li><strong>Email:</strong> contacto@tayka.co</li>
+              <li><strong>WhatsApp:</strong> [Contact Number]</li>
+              <li><strong>Office hours:</strong> Monday to Friday, 9:00 AM - 6:00 PM (Colombia Time)</li>
+            </ul>
           </section>
+
+          <p className="mt-8 text-sm italic">
+            By using our services and making a purchase, you accept these Terms of Service.
+          </p>
         </div>
       </div>
     </main>
